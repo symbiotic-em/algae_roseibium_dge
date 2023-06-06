@@ -1,0 +1,1651 @@
+BLASTN 2.12.0+
+
+
+Reference: Zheng Zhang, Scott Schwartz, Lukas Wagner, and Webb
+Miller (2000), "A greedy algorithm for aligning DNA sequences", J
+Comput Biol 2000; 7(1-2):203-14.
+
+
+
+Database: SSA01_assembly_longest_20180726.fa
+           71,057 sequences; 79,464,202 total letters
+
+
+
+Query= MW558455 [organism=Akashiwo sanguinea] [strain=CCMA256]
+B12-dependent methionine synthase (MetH) mRNA, complete cds
+
+Length=4308
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 331591313680
+
+
+Query= MW558456 [organism=Akashiwo sanguinea] [strain=CCMA256]
+B12-independent methionine synthase (MetE) mRNA, complete cds
+
+Length=1457
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 111069526320
+
+
+Query= MW558457 [organism=Alexandrium insuetum] [strain=AILYG-12]
+B12-independent methionine synthase (MetH) mRNA, complete cds
+
+Length=4075
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+TRINITY_DN21449_c0_g1_i1 len=4380 path=[1:0-95 74:96-137 116:138-...  1655    0.0  
+
+
+>TRINITY_DN21449_c0_g1_i1 len=4380 path=[1:0-95 74:96-137 116:138-366 
+345:367-829 11028:830-853 832:854-1051 11027:1052-1075 
+1054:1076-1152 11021:1153-1176 1155:1177-1524 11019:1525-1548 
+1527:1549-1605 1584:1606-1653 1632:1654-1701 11029:1702-1725 
+1704:1726-2134 11023:2135-2158 2137:2159-2238 2217:2239-2286 
+11024:2287-2310 2289:2311-2345 11031:2346-2369 2348:2370-2393 
+2372:2394-2421 2400:2422-2435 2414:2436-2460 2439:2461-2463 
+10767:2464-2487 2466:2488-2501 2480:2502-2574 11025:2575-2598 
+2577:2599-2733 9869:2734-2763 2742:2764-2787 2766:2788-2793 
+2772:2794-2811 2790:2812-2817 2796:2818-2849 11030:2850-2873 
+2852:2874-3023 11022:3024-3047 3026:3048-3756 9149:3757-3795 
+3774:3796-3996 11026:3997-4020 3999:4021-4134 4113:4135-4220 
+11020:4221-4244 4223:4245-4379] [-1, 1, 74, 116, 
+345, 11028, 832, 11027, 1054, 11021, 1155, 11019, 1527, 1584, 
+1632, 11029, 1704, 11023, 2137, 2217, 11024, 2289, 11031, 
+2348, 2372, 2400, 2414, 2439, 10767, 2466, 2480, 11025, 2577, 
+9869, 2742, 2766, 2772, 2790, 2796, 11030, 2852, 11022, 
+3026, 9149, 3774, 11026, 3999, 4113, 11020, 4223, -2]
+Length=4380
+
+ Score = 1655 bits (896),  Expect = 0.0
+ Identities = 1644/2015 (82%), Gaps = 12/2015 (1%)
+ Strand=Plus/Minus
+
+Query  50    CTGCCGCGTGGAGGGCGCGATCGACACGAAGAAGTTGGCGGAGAAGATCATGGCTTGCGG  109
+             |||||||||||||||| ||   || ||| ||||| ||||  ||||||| || |  |||  
+Sbjct  4115  CTGCCGCGTGGAGGGCCCGCAAGAGACGCAGAAGGTGGCCCAGAAGATTATTGAGTGCAA  4056
+
+Query  110   GACGCCCACGCCCACGGAGGTCCTCCAGTACTTCAACTCG-GAGCTCAAGAAGCGCATCT  168
+             ||| || || || ||||||||  || | |||||||| | | ||| | ||||||||||| |
+Sbjct  4055  GACCCCAACACCTACGGAGGTGATCAACTACTTCAA-TGGTGAGTTGAAGAAGCGCATTT  3997
+
+Query  169   GCTTCCTGGACGGCGGCATGGGCACGCGCATCCAGGCCGAGAAGCTGGAGGAGGCCGACT  228
+             |||||||||| || |||||||| || ||||| ||||| |||||  |||||||||| ||||
+Sbjct  3996  GCTTCCTGGATGGTGGCATGGGAACCCGCATTCAGGCAGAGAACTTGGAGGAGGCAGACT  3937
+
+Query  229   ACCGCGGCGAGCGCTTCAAGGACTTCAGCATGATCGACGCCAACGGCGTGCCCGTGTCCT  288
+             |||| || || || |||||||||||||||  ||  || ||||||||| | || || ||| 
+Sbjct  3936  ACCGTGGGGATCGGTTCAAGGACTTCAGCGAGAAGGATGCCAACGGCATCCCGGTCTCCC  3877
+
+Query  289   TGAAGGGCAACAACGACCTGTTGGTCTTCAGCAAGCCGGACATGATCAAGGACATTCACA  348
+             |||||||||||||||||||| |  ||||||||||||| ||||||||||||||||| ||||
+Sbjct  3876  TGAAGGGCAACAACGACCTGCTCATCTTCAGCAAGCCAGACATGATCAAGGACATCCACA  3817
+
+Query  349   AGGAGTACTTCGCCGGC-GGCTCCGACATCTGCGAGACGAACACCTTCAACGGCACGACC  407
+             |||||||||| || ||| ||||| |||||||||||||| ||||| |||||||||||| ||
+Sbjct  3816  AGGAGTACTTTGC-GGCTGGCTCAGACATCTGCGAGACCAACACTTTCAACGGCACGGCC  3758
+
+Query  408   ATCTCGCAGGGCGAGTACAAGATGCAGGAGATCGTCTACGAGATGAACAAGGTCGGTGCC  467
+             ||||||||||||||||||||||||||||   | ||  | |||||||||||||| || || 
+Sbjct  3757  ATCTCGCAGGGCGAGTACAAGATGCAGGCCGTTGTGCATGAGATGAACAAGGTGGGAGCA  3698
+
+Query  468   CAGCTGGCCAAGAAGGCCGCCGCGGAGGTCACCAAAGAGGAGCCGCACAAGCCCCGCTTC  527
+             |||||||| |||||||| || || ||||| || || |||||||||||||||||||| |||
+Sbjct  3697  CAGCTGGCGAAGAAGGCAGCAGCCGAGGTGACGAAGGAGGAGCCGCACAAGCCCCGATTC  3638
+
+Query  528   GTCGCCGGGGCGGTCGGTCCCACCAGCCGCACTCTGTCCGTGTCGCCCAGCGTCGAGGAC  587
+             || || || || || || |||||||||||||| |||  ||||||||| || || ||||| 
+Sbjct  3637  GTGGCAGGCGCAGTTGGGCCCACCAGCCGCACCCTGAGCGTGTCGCCAAGTGTGGAGGAT  3578
+
+Query  588   CCCTCGTTCAGGAATGTCACATGGGACGAGCTGGTGGAGGCCTACGTGCAGCAGATCGGT  647
+             || || ||| | || || || ||||||||||| |||||| |||||  ||||||| |  | 
+Sbjct  3577  CCATCCTTCCGCAACGTGACCTGGGACGAGCTTGTGGAGTCCTACAAGCAGCAGGTGAGC  3518
+
+Query  648   GGCCTTGTGGATGGTGGAGTGGACCTCCTCATGATTGAGACGATCTTCGACACTCAGAAC  707
+             || || ||||| || || || ||||| || |||||||||||  | |||||||| ||||||
+Sbjct  3517  GGTCTCGTGGACGGCGGCGTCGACCTGCTGATGATTGAGACTGTTTTCGACACACAGAAC  3458
+
+Query  708   -GCGAAGGCCGCCATCTTCGCCGTCGACGAGTACTTCCTTCGCACCG-GGAAGGAGCGTC  765
+              || ||||| |||||||| || || ||| ||||||||  |||   ||  ||||||||| |
+Sbjct  3457  TGC-AAGGCTGCCATCTTTGCAGTGGACCAGTACTTC-ATCGAGTCGAAGAAGGAGCGGC  3400
+
+Query  766   TGCCGGTGATGATCAGTGCCACCATCGTGGACAACAGCGGCCGGACGCTCTCCGGTCAGA  825
+             |||| |||||| | || ||||| |||||||||||||| ||||| ||||| || |||||||
+Sbjct  3399  TGCCAGTGATGCTTAGCGCCACGATCGTGGACAACAGTGGCCGCACGCTGTCTGGTCAGA  3340
+
+Query  826   CCATCGAGGCTTTCTTCGTCAGCATCAAGCACGCGAAGGCCTTCACCGTCGGCATCAACT  885
+             |||||||||| |||| ||||||  | ||||| ||| || ||||||| || || || ||||
+Sbjct  3339  CCATCGAGGCCTTCTACGTCAGTGTGAAGCATGCGCAGCCCTTCACGGTTGGAATTAACT  3280
+
+Query  886   GCGCCCTCGGCGCCGCCCAGATGAAGAAGTTCTACAAGATGCTGACCGACATGAACCTGG  945
+             | ||||| || || || |||||||||   |||||||||| ||||  ||||||||||   |
+Sbjct  3279  GTGCCCTGGGTGCGGCTCAGATGAAGGGCTTCTACAAGAAGCTGTGCGACATGAACTCAG  3220
+
+Query  946   GTTGGTGCCATGTGTACCCCAACGCCGGCCTGCCCAACGCCATGGGTGGCTACGACGAGG  1005
+               ||||||||||| |||||||| || ||||||||||| |||||||| ||||| |||||||
+Sbjct  3219  CCTGGTGCCATGTCTACCCCAATGCTGGCCTGCCCAATGCCATGGGCGGCTATGACGAGG  3160
+
+Query  1006  ACCCGGAGATCTTCTCAACGAACATCCTGGACTACGCCAAGGACGGGCTGCTCAACTTCG  1065
+             | || ||||||||||| |  ||||||||||||||||||||||| ||  | || |||||||
+Sbjct  3159  ATCCAGAGATCTTCTCCAGCAACATCCTGGACTACGCCAAGGATGGCATCCTGAACTTCG  3100
+
+Query  1066  TCGGTGGTTGCTGCGGCACCTTCCCCTCGCACATCGCGGCGGTGGCCAACAAGGTGAAGG  1125
+             |||| |||||||||||||||||||| || ||||| ||||| ||   ||| |||||| |||
+Sbjct  3099  TCGGCGGTTGCTGCGGCACCTTCCCTTCCCACATTGCGGCTGTCTGCAAGAAGGTGCAGG  3040
+
+Query  1126  ACTGCCCCCCGCGCAAGCTCCCCGAGCCCCCCAAGTACCCGTGCATGCAGCTCTCCGGCT  1185
+             | |||||   ||||||||| || ||||  |||||||||||  |||||  | | || ||| 
+Sbjct  3039  ATTGCCCAGTGCGCAAGCTGCCAGAGCTTCCCAAGTACCCCAGCATGATGTTGTCTGGCC  2980
+
+Query  1186  TGGAGCCTTGCATCCTGACGCCAGACTCCGGCTTCCAGTGGGTCGGCGAGCGTTGCAACC  1245
+             |||||||||||  | ||||| | ||  | ||||||||||||||||||||||| |||||| 
+Sbjct  2979  TGGAGCCTTGCCACGTGACGGCTGAGGCAGGCTTCCAGTGGGTCGGCGAGCGATGCAACT  2920
+
+Query  1246  TCATGGGCTCCGCCAAGTTCAAGAAGCTTGTGGACGCCTACAAGTGGGACGAGGCCATGG  1305
+             | |||||||| ||||| ||||||||||| ||||| |||||||||||||| ||||| ||||
+Sbjct  2919  TGATGGGCTCAGCCAAATTCAAGAAGCTGGTGGATGCCTACAAGTGGGATGAGGCTATGG  2860
+
+Query  1306  AGGTCTGCTTGGCCCAGTGCGAGAAGAAGGCCGACACCCTCGACTTCAACTTCGACTCCG  1365
+             |||| ||| | |||||||| ||||||||||| ||||  ||||| |||||||||||||| |
+Sbjct  2859  AGGTTTGCATTGCCCAGTGTGAGAAGAAGGCGGACATTCTCGATTTCAACTTCGACTCGG  2800
+
+Query  1366  ACCTCATCGACGG-CAAGTCGGCCATGGGCAAGTTCATGCGGTTGTGCGTCACGGAGCCG  1424
+             |||| |||||||| ||| ||||||||| ||||||||||| || | |||||||| ||||| 
+Sbjct  2799  ACCTTATCGACGGGCAA-TCGGCCATGAGCAAGTTCATGAGGCTCTGCGTCACAGAGCCC  2741
+
+Query  1425  AACGTGGCGAAGTTGCCGTTCATGATCGACTCCTCCAAGTGGCCCGTGATCGAGGAGGGC  1484
+             | |||||| ||| |||| |||||||||||||||||||||||||||||| |||| ||||||
+Sbjct  2740  ACCGTGGCCAAGCTGCCCTTCATGATCGACTCCTCCAAGTGGCCCGTGGTCGAAGAGGGC  2681
+
+Query  1485  CTCAAGTGCGTGCAGGGGAAGTCCATCGTGAACTCCATCTCCCTGAAGGTGGGCGAGGAG  1544
+             ||||| ||||||||||| |||| ||||||||| || || || |||||||| |||||||| 
+Sbjct  2680  CTCAAATGCGTGCAGGGCAAGTGCATCGTGAATTCGATTTCACTGAAGGTCGGCGAGGAA  2621
+
+Query  1545  GAATTCATGCGGCAGGCGAAGCTCTGCCAGCGCTTCGGTGCCGCGGTCGTCATCATGGCC  1604
+             || ||  | || ||||||||||| |||  |||||  ||||| || || || |||||||||
+Sbjct  2620  GAGTTTCTTCGTCAGGCGAAGCTTTGCATGCGCTATGGTGCAGCTGTGGTTATCATGGCC  2561
+
+Query  1605  TTCGACGAGCAGGGCCAGGCCGCCACGTATGAGGACAAGGTTAGGATTTGCCAGAGGAGC  1664
+             ||||| |||||||| ||||| ||||| |  |||||||||||| | || |||||| | |||
+Sbjct  2560  TTCGATGAGCAGGGTCAGGCGGCCACCTTCGAGGACAAGGTTCGCATCTGCCAGCGCAGC  2501
+
+Query  1665  TACAGGCTTTTGCGCTCGAAGCTGGGCTTCAACCCCGAGGACATCATCTTCGACTGCAAC  1724
+             ||||||    |||||  |||  | | ||||   ||||||||||| |||||||| ||||||
+Sbjct  2500  TACAGGTGCCTGCGCGAGAACATTGACTTCCCGCCCGAGGACATTATCTTCGATTGCAAC  2441
+
+Query  1725  GTCCTGACGATCGCCACGGGGCTCCCCGAGCACAACTCCTACGCCCTCGACTTCATCAAT  1784
+             ||| |||| |||||||| || || || |||||||||||||||||| ||||||||||||||
+Sbjct  2440  GTCTTGACCATCGCCACCGGACTGCCGGAGCACAACTCCTACGCCGTCGACTTCATCAAT  2381
+
+Query  1785  GCGGTGGCGGAGATCAAGCGCACTTGCCCGTGCGTCTCTTTCAGCGGCGGCCTCAGCAAC  1844
+             || |||||||||||||||||||| ||||| |||||||| |||   || ||| | ||||||
+Sbjct  2380  GCCGTGGCGGAGATCAAGCGCACCTGCCCATGCGTCTCCTTCTCTGGAGGCTTGAGCAAC  2321
+
+Query  1845  CTCTCCTTCTCCTTCCGAGGTCTCAACTCCTTGCGCGACGCGATGCACAGCGTCTTCTTG  1904
+             || || ||||||||||| || || |||||| | || || || ||||||||||| ||| | 
+Sbjct  2320  CTGTCTTTCTCCTTCCGCGGCCTGAACTCCCTTCGGGATGCCATGCACAGCGTGTTCCTC  2261
+
+Query  1905  TACCACGCCGTTCCCAAGGGGTTGAACATGTCGATCGTCAACCCCGGCAGTCTGCCGAGG  1964
+             |||||||| || ||||||||  |||||||||| ||||| ||||| ||  | || ||  | 
+Sbjct  2260  TACCACGCAGTGCCCAAGGGTCTGAACATGTCCATCGTGAACCCGGGAGGCCTTCCCCGC  2201
+
+Query  1965  TGCGAGGACATCGACGAGCAGTCGCGCAAGCTCTGC-GAGGAGGTCATCCTCAACAAGTC  2023
+             | |  ||||||||||||| |  | ||||||||  || || ||||| ||||| ||| ||||
+Sbjct  2200  TACACGGACATCGACGAGAACACACGCAAGCTG-GCGGAAGAGGTGATCCTGAACCAGTC  2142
+
+Query  2024  CGCGGACGGCAACCATGTCGAGCGCTTCCTCGAGT  2058
+              || |  ||||| || |||||||||||||| ||||
+Sbjct  2141  TGCAGCTGGCAAGCACGTCGAGCGCTTCCTGGAGT  2107
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 313539730482
+
+
+Query= MW558458 [organism=Alexandrium insuetum] [strain=AILYG-12]
+B12-independent methionine synthase (MetE) mRNA, complete cds
+
+Length=1696
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+TRINITY_DN10718_c0_g2_i1 len=774 path=[1:0-377 1431:378-433 376:4...  56.5    1e-06
+
+
+>TRINITY_DN10718_c0_g2_i1 len=774 path=[1:0-377 1431:378-433 376:434-773] 
+[-1, 1, 1431, 376, -2]
+Length=774
+
+ Score = 56.5 bits (30),  Expect = 1e-06
+ Identities = 30/30 (100%), Gaps = 0/30 (0%)
+ Strand=Plus/Minus
+
+Query  2    CCGTAGCCATTTTGGCTCAAGCCGTTTGGT  31
+            ||||||||||||||||||||||||||||||
+Sbjct  707  CCGTAGCCATTTTGGCTCAAGCCGTTTGGT  678
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 129423711547
+
+
+Query= MW558459 [organism=Alexandrium pacificum] [strain=APNJD-1]
+B12-dependent methionine synthase (MetH) mRNA, complete cds
+
+Length=4252
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 327252735744
+
+
+Query= MW558460 [organism=Alexandrium pacificum] [strain=APNJD-1]
+B12-independent methionine synthase (MetE) mRNA, complete cds
+
+Length=1594
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 121514053921
+
+
+Query= MW558461 [organism=Gymnodinium catenatum] [strain=TIO-527]
+B12-dependent methionine synthase (MetH) mRNA, complete cds
+
+Length=4316
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 332211110528
+
+
+Query= MW558462 [organism=Gymnodinium catenatum] [strain=TIO-527]
+B12-independent methionine synthase (MetE) 1 mRNA, complete cds
+
+Length=1579
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 120538766160
+
+
+Query= MW558463 [organism=Gymnodinium catenatum] [strain=TIO-527]
+B12-independent methionine synthase (MetE) 2 mRNA, complete cds
+
+Length=1355
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+TRINITY_DN2485_c0_g1_i1 len=1135 path=[1:0-1120 1099:1121-1127 10...  62.1    2e-08
+TRINITY_DN19616_c0_g1_i1 len=906 path=[879:0-27 884:28-49 906:50-...  58.4    3e-07
+TRINITY_DN66741_c0_g1_i1 len=641 path=[1:0-640] [-1, 1, -2]           54.7    4e-06
+TRINITY_DN15344_c0_g2_i1 len=882 path=[860:0-825 1663:826-838 167...  54.7    4e-06
+TRINITY_DN21216_c0_g1_i4 len=401 path=[379:0-89 446:90-107 464:10...  52.8    1e-05
+
+
+>TRINITY_DN2485_c0_g1_i1 len=1135 path=[1:0-1120 1099:1121-1127 
+1099:1128-1134] [-1, 1, 1099, 1099, -2]
+Length=1135
+
+ Score = 62.1 bits (33),  Expect = 2e-08
+ Identities = 35/36 (97%), Gaps = 0/36 (0%)
+ Strand=Plus/Minus
+
+Query  5     TAGCCATTTTGGCTCAAGCCATTTTGGCTCAAGTCT  40
+             ||||||||||||||||||||||||||||||||| ||
+Sbjct  1094  TAGCCATTTTGGCTCAAGCCATTTTGGCTCAAGGCT  1059
+
+
+>TRINITY_DN19616_c0_g1_i1 len=906 path=[879:0-27 884:28-49 906:50-271 
+1128:272-318 1175:319-347 1970:348-371 1228:372-853 
+1710:854-872 1729:873-877 1734:878-900 1729:901-905] [-1, 879, 
+884, 906, 1128, 1175, 1970, 1228, 1710, 1729, 1734, 1729, 
+-2]
+Length=906
+
+ Score = 58.4 bits (31),  Expect = 3e-07
+ Identities = 31/31 (100%), Gaps = 0/31 (0%)
+ Strand=Plus/Plus
+
+Query  10  ATTTTGGCTCAAGCCATTTTGGCTCAAGTCT  40
+           |||||||||||||||||||||||||||||||
+Sbjct  1   ATTTTGGCTCAAGCCATTTTGGCTCAAGTCT  31
+
+
+>TRINITY_DN66741_c0_g1_i1 len=641 path=[1:0-640] [-1, 1, -2]
+Length=641
+
+ Score = 54.7 bits (29),  Expect = 4e-06
+ Identities = 29/29 (100%), Gaps = 0/29 (0%)
+ Strand=Plus/Minus
+
+Query  6    AGCCATTTTGGCTCAAGCCATTTTGGCTC  34
+            |||||||||||||||||||||||||||||
+Sbjct  589  AGCCATTTTGGCTCAAGCCATTTTGGCTC  561
+
+
+>TRINITY_DN15344_c0_g2_i1 len=882 path=[860:0-825 1663:826-838 
+1676:839-866 1704:867-881] [-1, 860, 1663, 1676, 1704, -2]
+Length=882
+
+ Score = 54.7 bits (29),  Expect = 4e-06
+ Identities = 29/29 (100%), Gaps = 0/29 (0%)
+ Strand=Plus/Plus
+
+Query  10  ATTTTGGCTCAAGCCATTTTGGCTCAAGT  38
+           |||||||||||||||||||||||||||||
+Sbjct  1   ATTTTGGCTCAAGCCATTTTGGCTCAAGT  29
+
+
+>TRINITY_DN21216_c0_g1_i4 len=401 path=[379:0-89 446:90-107 464:108-117 
+474:118-154 511:155-155 512:156-161 518:162-182 883:183-207 
+908:208-259 616:260-273 1545:274-297 654:298-303 1543:304-327 
+684:328-331 688:332-400] [-1, 379, 446, 464, 474, 
+511, 512, 518, 883, 908, 616, 1545, 654, 1543, 684, 688, -2]
+Length=401
+
+ Score = 52.8 bits (28),  Expect = 1e-05
+ Identities = 28/28 (100%), Gaps = 0/28 (0%)
+ Strand=Plus/Minus
+
+Query  6    AGCCATTTTGGCTCAAGCCATTTTGGCT  33
+            ||||||||||||||||||||||||||||
+Sbjct  384  AGCCATTTTGGCTCAAGCCATTTTGGCT  357
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 103152620880
+
+
+Query= MW558464 [organism=Heterocapsa rotundata] [strain=HRDH-13]
+B12-dependent methionine synthase (MetH) mRNA, complete cds
+
+Length=4287
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 329964346954
+
+
+Query= MW558465 [organism=Karenia brevis][strain=CCMA027] B12-dependent
+methionine synthase (MetH) isoform 1 mRNA, complete cds
+
+Length=4606
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 354678746268
+
+
+Query= MW558466 [organism=Karenia brevis][strain=CCMA027] B12-dependent
+methionine synthase (MetH) isoform 2 mRNA, complete cds
+
+Length=4370
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 336394739252
+
+
+Query= MW558467 [organism=Karenia brevis][strain=CCMA027] B12-independent
+methionine synthase (MetE) 1 isoform 1 mRNA, complete cds
+
+Length=1630
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 124305697789
+
+
+Query= MW558468 [organism=Karenia brevis][strain=CCMA027] B12-independent
+methionine synthase (MetE) 1 isoform 2 mRNA, complete cds
+
+Length=1382
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 105248272320
+
+
+Query= MW558469 [organism=Karenia brevis][strain=CCMA027] B12-independent
+methionine synthase (MetE) 1 isoform 3 mRNA, complete cds
+
+Length=1460
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+TRINITY_DN2485_c0_g1_i1 len=1135 path=[1:0-1120 1099:1121-1127 10...  58.4    3e-07
+
+
+>TRINITY_DN2485_c0_g1_i1 len=1135 path=[1:0-1120 1099:1121-1127 
+1099:1128-1134] [-1, 1, 1099, 1099, -2]
+Length=1135
+
+ Score = 58.4 bits (31),  Expect = 3e-07
+ Identities = 36/38 (95%), Gaps = 2/38 (5%)
+ Strand=Plus/Minus
+
+Query  5     TAGCCATTTTGGCTCAAGCCATTTTGGCATCAAGAGCT  42
+             |||||||||||||||||||||||||||| ||||| |||
+Sbjct  1094  TAGCCATTTTGGCTCAAGCCATTTTGGC-TCAAG-GCT  1059
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 111302376480
+
+
+Query= MW558470 [organism=Karenia brevis][strain=CCMA027] B12-independent
+methionine synthase (MetE) 2 mRNA, complete cds
+
+Length=1361
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 103618321200
+
+
+Query= MW558471 [organism=Karenia mikimotoi][strain=CCMA083] B12-dependent
+methionine synthase (MetH) isoform 1 mRNA, complete cds
+
+Length=4577
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 352431982694
+
+
+Query= MW558472 [organism=Karenia mikimotoi][strain=CCMA083] B12-dependent
+methionine synthase (MetH) isoform 2 mRNA, complete cds
+
+Length=4282
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 329576973924
+
+
+Query= MW558473 [organism=Karenia mikimotoi][strain=CCMA083]
+B12-independent methionine synthase (MetE) 1 mRNA, complete cds
+
+Length=1732
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 132215355415
+
+
+Query= MW558474 [organism=Karenia mikimotoi][strain=CCMA083]
+B12-independent methionine synthase (MetE) 2 isoform 1 mRNA,
+complete cds
+
+Length=1258
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 95623799040
+
+
+Query= MW558475 [organism=Karenia mikimotoi][strain=CCMA083]
+B12-independent methionine synthase (MetE) 2 isoform 2 mRNA,
+complete cds
+
+Length=1498
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 114251811840
+
+
+Query= MW558476 [organism=Karlodinium veneficum][strain=KVND-1]
+B12-dependent methionine synthase (MetH) isoform 1 mRNA, complete
+cds
+
+Length=4274
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 328957177076
+
+
+Query= MW558477 [organism=Karlodinium veneficum][strain=KVND-1]
+B12-dependent methionine synthase (MetH) isoform 2 mRNA, complete
+cds
+
+Length=4274
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 328957177076
+
+
+Query= MW558478 [organism=Karlodinium veneficum][strain=KVND-1]
+B12-independent methionine synthase (MetE) 1 isoform 1 mRNA,
+complete cds
+
+Length=1637
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 124848517430
+
+
+Query= MW558479 [organism=Karlodinium veneficum][strain=KVND-1]
+B12-independent methionine synthase (MetE) 1 isoform 1 mRNA,
+complete cds
+
+Length=1634
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 124615880441
+
+
+Query= MW558480 [organism=Karlodinium veneficum][strain=KVND-1]
+B12-independent methionine synthase (MetE) 2 mRNA, complete cds
+
+Length=1598
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 121824236573
+
+
+Query= MW558481 [organism=Margalefidinium polykrikoides] [strain=CP1]
+B12-dependent methionine synthase (MetH) mRNA, complete cds
+
+Length=4237
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 326090616654
+
+
+Query= MW558482 [organism=Margalefidinium polykrikoides] [strain=CP1]
+B12-independent methionine synthase (MetE) mRNA, complete cds
+
+Length=1591
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 121470166800
+
+
+Query= MW558483 [organism=Prorocentrum donghaiense] [strain=CCMA264]
+B12-dependent methionine synthase (MetH) mRNA, complete cds
+
+Length=4268
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 328492329440
+
+
+Query= MW558484 [organism=Prorocentrum donghaiense] [strain=CCMA264]
+B12-independent methionine synthase (MetE) mRNA, complete cds
+
+Length=1924
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 147104122711
+
+
+Query= MW558485 [organism=Prorocentrum minimum] [strain=CCMA262]
+B12-dependent methionine synthase (MetH) mRNA, complete cds
+
+Length=4488
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 345536742760
+
+
+Query= MW558486 [organism=Prorocentrum minimum] [strain=CCMA262]
+B12-independent methionine synthase (MetE) mRNA, complete cds
+
+Length=1358
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+TRINITY_DN26598_c0_g1_i1 len=650 path=[1:0-649] [-1, 1, -2]           56.5    1e-06
+
+
+>TRINITY_DN26598_c0_g1_i1 len=650 path=[1:0-649] [-1, 1, -2]
+Length=650
+
+ Score = 56.5 bits (30),  Expect = 1e-06
+ Identities = 30/30 (100%), Gaps = 0/30 (0%)
+ Strand=Plus/Plus
+
+Query  4   GTAGCCATTTTGGCTCAAGCCGTTTTGGCT  33
+           ||||||||||||||||||||||||||||||
+Sbjct  20  GTAGCCATTTTGGCTCAAGCCGTTTTGGCT  49
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 103385471040
+
+
+Query= MW558487 [organism=Scrippsiella trochoidea] [strain=STIOCAS]
+B12-dependent methionine synthase (MetH) mRNA, complete cds
+
+Length=4436
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+TRINITY_DN21449_c0_g1_i1 len=4380 path=[1:0-95 74:96-137 116:138-...  2394    0.0  
+
+
+>TRINITY_DN21449_c0_g1_i1 len=4380 path=[1:0-95 74:96-137 116:138-366 
+345:367-829 11028:830-853 832:854-1051 11027:1052-1075 
+1054:1076-1152 11021:1153-1176 1155:1177-1524 11019:1525-1548 
+1527:1549-1605 1584:1606-1653 1632:1654-1701 11029:1702-1725 
+1704:1726-2134 11023:2135-2158 2137:2159-2238 2217:2239-2286 
+11024:2287-2310 2289:2311-2345 11031:2346-2369 2348:2370-2393 
+2372:2394-2421 2400:2422-2435 2414:2436-2460 2439:2461-2463 
+10767:2464-2487 2466:2488-2501 2480:2502-2574 11025:2575-2598 
+2577:2599-2733 9869:2734-2763 2742:2764-2787 2766:2788-2793 
+2772:2794-2811 2790:2812-2817 2796:2818-2849 11030:2850-2873 
+2852:2874-3023 11022:3024-3047 3026:3048-3756 9149:3757-3795 
+3774:3796-3996 11026:3997-4020 3999:4021-4134 4113:4135-4220 
+11020:4221-4244 4223:4245-4379] [-1, 1, 74, 116, 
+345, 11028, 832, 11027, 1054, 11021, 1155, 11019, 1527, 1584, 
+1632, 11029, 1704, 11023, 2137, 2217, 11024, 2289, 11031, 
+2348, 2372, 2400, 2414, 2439, 10767, 2466, 2480, 11025, 2577, 
+9869, 2742, 2766, 2772, 2790, 2796, 11030, 2852, 11022, 
+3026, 9149, 3774, 11026, 3999, 4113, 11020, 4223, -2]
+Length=4380
+
+ Score = 2394 bits (1296),  Expect = 0.0
+ Identities = 2978/3803 (78%), Gaps = 63/3803 (2%)
+ Strand=Plus/Minus
+
+Query  382   TACTTCAACAGCGAGCTCAAAAGGCGGATCTGCTTCTTGGACGGCGGCGTGGGGACTCGC  441
+             ||||||||  | ||| | || | ||| || |||||| |||| || ||| |||| || |||
+Sbjct  4027  TACTTCAATGGTGAGTTGAAGAAGCGCATTTGCTTCCTGGATGGTGGCATGGGAACCCGC  3968
+
+Query  442   ATCCAGGCAGAGATGCTT-GAGGAAGCGGACTACCGCGGGGATCGCTTCAAGGACTTCAA  500
+             || ||||||||||  ||| ||||| || |||||||| |||||||| ||||||||||||| 
+Sbjct  3967  ATTCAGGCAGAGA-ACTTGGAGGAGGCAGACTACCGTGGGGATCGGTTCAAGGACTTCAG  3909
+
+Query  501   TCAGATCGATGCCAACGGCGTGCCTGTGTCATTGAAGGGCAACAATGACCTCCTCGTCAT  560
+               |||  |||||||||||| | || || ||  ||||||||||||| ||||| ||| || |
+Sbjct  3908  CGAGAAGGATGCCAACGGCATCCCGGTCTCCCTGAAGGGCAACAACGACCTGCTCATCTT  3849
+
+Query  561   CAGCAAGCCGGACTTGGTGAAGGACATTCACCAGGAGTACTTTGCAGCGGGCTCCGACAT  620
+             ||||||||| ||| || | |||||||| ||| ||||||||||||| || ||||| |||||
+Sbjct  3848  CAGCAAGCCAGACATGATCAAGGACATCCACAAGGAGTACTTTGCGGCTGGCTCAGACAT  3789
+
+Query  621   CTGCGAGACCAACACCTTCAACGGCACCACAATCTCCCAGGGAGAGTACAAGATGCAGGA  680
+             ||||||||||||||| |||||||||||  | ||||| ||||| |||||||||||||||| 
+Sbjct  3788  CTGCGAGACCAACACTTTCAACGGCACGGCCATCTCGCAGGGCGAGTACAAGATGCAGGC  3729
+
+Query  681   GGTGGTCTACGAGATGAACAAGATCGGCGCGGAATTGGCCAAGAAGGCCGCAGCCGAGGT  740
+              || ||  | |||||||||||| | || ||  |  |||| |||||||| |||||||||||
+Sbjct  3728  CGTTGTGCATGAGATGAACAAGGTGGGAGCACAGCTGGCGAAGAAGGCAGCAGCCGAGGT  3669
+
+Query  741   GACCAAGGCGGAGCCGCACAAGCCGCGCTTTGTCGCGGGTGCAGTTGGGCCCACCAGCCG  800
+             ||| |||| ||||||||||||||| || || || || || ||||||||||||||||||||
+Sbjct  3668  GACGAAGGAGGAGCCGCACAAGCCCCGATTCGTGGCAGGCGCAGTTGGGCCCACCAGCCG  3609
+
+Query  801   CACCTTGTCGGTGTCCCCCAGCGTCGAGGACCCTTCGTTCCGGAACGTCACGTGGGATGA  860
+             |||| ||   ||||| || || || ||||| || || ||||| ||||| || ||||| ||
+Sbjct  3608  CACCCTGAGCGTGTCGCCAAGTGTGGAGGATCCATCCTTCCGCAACGTGACCTGGGACGA  3549
+
+Query  861   GTTGGTGGAGGCGTACGTCGACCAGATCCGTGGCCTCGTGGATGGCGGCGTGGATCTCTT  920
+             | | |||||| | |||    | ||| |  | || |||||||| |||||||| || ||  |
+Sbjct  3548  GCTTGTGGAGTCCTACAAGCAGCAGGTGAGCGGTCTCGTGGACGGCGGCGTCGACCTGCT  3489
+
+Query  921   GATGATTGAGACGATCTTCGACACGCAGAA-TGCCAAGGCAGCCATCTACGCAGTAGACG  979
+             ||||||||||||  | |||||||| ||||| || |||||| |||||||  ||||| ||| 
+Sbjct  3488  GATGATTGAGACTGTTTTCGACACACAGAACTG-CAAGGCTGCCATCTTTGCAGTGGACC  3430
+
+Query  980   AGTACTTTGAGCGACAC-AAGACGGAGCGCTTGCCGGTGATGATCAGCGCCACCATCGTG  1038
+             |||||||  | |||  | |||| ||||||  |||| |||||| | |||||||| ||||||
+Sbjct  3429  AGTACTT-CATCGAGTCGAAGAAGGAGCGGCTGCCAGTGATGCTTAGCGCCACGATCGTG  3371
+
+Query  1039  GACAACAGCGGCCGGACTTTGTCCGGACAGACCATTGAGGCCTTCTTCATCAGCATCAAG  1098
+             |||||||| ||||| ||  |||| || |||||||| |||||||||| | ||||  | |||
+Sbjct  3370  GACAACAGTGGCCGCACGCTGTCTGGTCAGACCATCGAGGCCTTCTACGTCAGTGTGAAG  3311
+
+Query  1099  CACGCAAAAGCCTTTACCGTGGGCATCAATTGTGCCTTGGGCGCGGCACAGATGAAGAAA  1158
+             || ||  |  |||| || || || || || |||||| |||| ||||| |||||||||   
+Sbjct  3310  CATGCGCAGCCCTTCACGGTTGGAATTAACTGTGCCCTGGGTGCGGCTCAGATGAAGGGC  3251
+
+Query  1159  CTCTACAAGATGTTGGTG-GACATGAATCCGGGATGGTGCCACGTCTACCCGAATGCCGG  1217
+              ||||||||| | || || ||||||||  | |  |||||||| |||||||| ||||| ||
+Sbjct  3250  TTCTACAAGAAGCTG-TGCGACATGAACTCAGCCTGGTGCCATGTCTACCCCAATGCTGG  3192
+
+Query  1218  CTTGCCCAACGCCATGGGTGGCTACGACGAGGACCCAGAGATCTTCGGTAC-G-AACTTG  1275
+             | ||||||| |||||||| ||||| |||||||| ||||||||||||  | | | ||| | 
+Sbjct  3191  CCTGCCCAATGCCATGGGCGGCTATGACGAGGATCCAGAGATCTTC--TCCAGCAACATC  3134
+
+Query  1276  TACGACTATGCCAAGGATGGGCTGCTCAATTTTGTGGGTGGCTGCTGCGGCACCTTCCCC  1335
+                ||||| |||||||||||  | || || || || || || ||||||||||||||||| 
+Sbjct  3133  CTGGACTACGCCAAGGATGGCATCCTGAACTTCGTCGGCGGTTGCTGCGGCACCTTCCCT  3074
+
+Query  1336  TCGCACATCAATGC-CTCGGCCAACAAGGTGAAGGATTGC-AAGCCGCGTGTGCTGCCTG  1393
+             || |||||    ||  || | ||| |||||| ||||||||  ||  |||   |||||| |
+Sbjct  3073  TCCCACATTGCGGCTGTCTG-CAAGAAGGTGCAGGATTGCCCAG-TGCGCAAGCTGCCAG  3016
+
+Query  1394  AGCTTCCCAAGTACCCGGTGATGCAGTTGTCCGGCTTGGAGCCTTGCATCTTGGAGCCCG  1453
+             ||||||||||||||||    |||  |||||| ||| |||||||||||  | ||  | | |
+Sbjct  3015  AGCTTCCCAAGTACCCCAGCATGATGTTGTCTGGCCTGGAGCCTTGCCACGTGACGGCTG  2956
+
+Query  1454  AGCTCGGCTTCCAGTGGGTTGGCGAGCGCTGCAACTTGATGGGCTCGGCCAAGTTCAAGA  1513
+             ||   |||||||||||||| |||||||| ||||||||||||||||| ||||| |||||||
+Sbjct  2955  AGGCAGGCTTCCAGTGGGTCGGCGAGCGATGCAACTTGATGGGCTCAGCCAAATTCAAGA  2896
+
+Query  1514  AGCTGGTGGATGCCTACAAGTGGGACGAGGCTATGGAGGTGTGCCTTGCGCAGTGCGAGA  1573
+             ||||||||||||||||||||||||| |||||||||||||| ||| |||| ||||| ||||
+Sbjct  2895  AGCTGGTGGATGCCTACAAGTGGGATGAGGCTATGGAGGTTTGCATTGCCCAGTGTGAGA  2836
+
+Query  1574  AGAAGGCCGACATCTTGGACTTCAACTTTGATTCGGACCTCATTGATGGGCAGTCTGCCA  1633
+             ||||||| |||||  | || |||||||| || |||||||| || || ||||| || ||||
+Sbjct  2835  AGAAGGCGGACATTCTCGATTTCAACTTCGACTCGGACCTTATCGACGGGCAATCGGCCA  2776
+
+Query  1634  TGGGCAAGTTCATGCGCTTGTGCGTTACGGAGCCGAACGTGGCTAGGCTTCCCTTCATGA  1693
+             || ||||||||||| |  | ||||| || ||||| | |||||| | ||| ||||||||||
+Sbjct  2775  TGAGCAAGTTCATGAGGCTCTGCGTCACAGAGCCCACCGTGGCCAAGCTGCCCTTCATGA  2716
+
+Query  1694  TTGACTCATCGAAGTGGCCCGTGATTGAGGAGGGCTTGAAATGTGTCCAGGGCAAGAGCA  1753
+             | ||||| || |||||||||||| | || |||||| | ||||| || ||||||||| |||
+Sbjct  2715  TCGACTCCTCCAAGTGGCCCGTGGTCGAAGAGGGCCTCAAATGCGTGCAGGGCAAGTGCA  2656
+
+Query  1754  TTGTGAATTCGATCTCTCTGAAGGTCGGCGAGGAGGAGTTCCTCCGGCAGGCCAAGCAGG  1813
+             | ||||||||||| || ||||||||||||||||| ||||| || || ||||| ||||   
+Sbjct  2655  TCGTGAATTCGATTTCACTGAAGGTCGGCGAGGAAGAGTTTCTTCGTCAGGCGAAGCTTT  2596
+
+Query  1814  TCATGCGCGTTGGAGCCGCGGTTGTCATCATGGCCTTTGACGAGCAGGGCCAGGCTGCCA  1873
+              |||||||  ||| || || || || ||||||||||| || |||||||| ||||| ||||
+Sbjct  2595  GCATGCGCTATGGTGCAGCTGTGGTTATCATGGCCTTCGATGAGCAGGGTCAGGCGGCCA  2536
+
+Query  1874  CGTTTGAGGATAAGGTGCGCATCTGCCAGCGCAGCTACAAGCTG-CTGCGCACAAAGATC  1932
+             | || ||||| ||||| |||||||||||||||||||||| | || ||||||   || || 
+Sbjct  2535  CCTTCGAGGACAAGGTTCGCATCTGCCAGCGCAGCTACA-GGTGCCTGCGCGAGAACATT  2477
+
+Query  1933  GACTTCCCTCCGGAGGACATCATCTTCGATTGCAATGTGTTGACGATTGCCACAGGGCTG  1992
+             |||||||| || |||||||| |||||||||||||| || ||||| || ||||| || |||
+Sbjct  2476  GACTTCCCGCCCGAGGACATTATCTTCGATTGCAACGTCTTGACCATCGCCACCGGACTG  2417
+
+Query  1993  CCGGAGCACAACGGCTATGGCATCGACTTCATCAACGCGGTGGAGGAGATCAAGCGAACA  2052
+             ||||||||||||  ||| | | ||||||||||||| || |||| |||||||||||| || 
+Sbjct  2416  CCGGAGCACAACTCCTACGCCGTCGACTTCATCAATGCCGTGGCGGAGATCAAGCGCACC  2357
+
+Query  2053  TGCCCATGCGTGTCCTTCAGCGGAGGCTTGAGCAATTTGTCTTTCTCTTTCCGCGGTCTC  2112
+             ||||||||||| ||||||   ||||||||||||||  |||||||||| |||||||| || 
+Sbjct  2356  TGCCCATGCGTCTCCTTCTCTGGAGGCTTGAGCAACCTGTCTTTCTCCTTCCGCGGCCTG  2297
+
+Query  2113  AACTCAGTGCGCGATGCCATGCACACAGTGTTCTTGTACCATTCCGTTCCGAAGGGCTTG  2172
+             |||||  | || |||||||||||||  |||||| | |||||  | || || |||||  ||
+Sbjct  2296  AACTCCCTTCGGGATGCCATGCACAGCGTGTTCCTCTACCACGCAGTGCCCAAGGGTCTG  2237
+
+Query  2173  AACATGTCCATCGTCAACCCTGGTGGCTTGCCCCGCTACGAGGACATCGACCCCAACACA  2232
+             |||||||||||||| ||||| || ||| | |||||||||  ||||||||||   ||||||
+Sbjct  2236  AACATGTCCATCGTGAACCCGGGAGGCCTTCCCCGCTACACGGACATCGACGAGAACACA  2177
+
+Query  2233  CGCAAGCTCTGC-ACAGAGGTCATCCTGAACAAGTCAGACGAC-GGCAAGCATGTGGAGA  2290
+             ||||||||  ||   |||||| ||||||||| |||| | |  | |||||||| || ||| 
+Sbjct  2176  CGCAAGCT-GGCGGAAGAGGTGATCCTGAACCAGTCTG-CAGCTGGCAAGCACGTCGAGC  2119
+
+Query  2291  GATTCTTGGAGTTTGCAGAGCAGGTAAAGAACCCACCAAAGGCTGCCCCTGGAggcgccg  2350
+             | ||| ||||||  ||   | |||   ||    |  | ||| |||||||     | || |
+Sbjct  2118  GCTTCCTGGAGTACGC--CG-AGG--CAG--TTC-GC-AAGCCTGCCCC-----G-GCTG  2074
+
+Query  2351  cggctggcgccgcaggcggcgctggcggcggcaaggacgcttggcgcaatggcaACTACA  2410
+             ||| ||| || || || ||||||  |  || |||||| || ||||| |  ||||  | ||
+Sbjct  2073  CGGGTGGTGCTGCGGGTGGCGCT--C-CCGCCAAGGATGCCTGGCGAAGCGGCACATTCA  2017
+
+Query  2411  CTGAGAGGCTCCACCACGGCCTCATCCATGGCATTGACAAGTTCATCGACGGCGACGTCG  2470
+             | ||| | || ||| | || || ||| | || || ||||||||||| || || ||   ||
+Sbjct  2016  CAGAGCGTCTGCACTATGGGCTGATCAACGGTATCGACAAGTTCATTGAGGGGGATACCG  1957
+
+Query  2471  AGGAGGCCCGGGTGGATCTCAAGGTCCCCCTGCACGTCATCGAGGGCCCTCTCATGCAGG  2530
+             ||||||||||||  || || ||  |||| ||| | ||||||||||| ||  | ||| | |
+Sbjct  1956  AGGAGGCCCGGGCAGAACTGAAAATCCCGCTGAAAGTCATCGAGGGGCCGTTGATGGAAG  1897
+
+Query  2531  GCATGGGCATCATCGGTGACTTGTTCGGGGCAGGTAAGATGTTCTTGCCGCAGGTCATCA  2590
+             |||||||||||||||| ||| | |||||  | || |||||||||||||||||||||||||
+Sbjct  1896  GCATGGGCATCATCGGCGACCTTTTCGGATCCGGAAAGATGTTCTTGCCGCAGGTCATCA  1837
+
+Query  2591  AGTCCGCTCGTGTGATGAAGAAGGCTGTCGCGTACCTCACGCCCTTCATGGAGGAGGAGA  2650
+             ||  ||| || || ||||||||||| || |||||||| || ||||||||||| || || |
+Sbjct  1836  AGAGCGCACGAGTCATGAAGAAGGCCGTGGCGTACCTGACCCCCTTCATGGACGACGAAA  1777
+
+Query  2651  AGAGAGCTGCCGCCCTCGCAGCTGGGGAGGACCCGGACCAACCAAAGTACAACGGCGTGG  2710
+              | | || |||||||| || || || |||||||| || || || |||||||||||||| |
+Sbjct  1776  GGCGTGCAGCCGCCCTGGCTGCCGGCGAGGACCCTGATCAGCCCAAGTACAACGGCGTTG  1717
+
+Query  2711  TTCTCATGGCCACGGTGAAGGGAGATGTGCATGACATTGGGAAGAACATTGTTGGGGTCG  2770
+             | || ||||| |||||||||||||||||||| |||||||| |||||||| || || || |
+Sbjct  1716  TGCTGATGGCAACGGTGAAGGGAGATGTGCACGACATTGGCAAGAACATCGTGGGAGTTG  1657
+
+Query  2771  TGCTGGGATGCAATAACTACAAGGTTATTGACATGGGCGTCATGGTGCCCTGCGAAAAGA  2830
+             | ||||| ||||| |||| |||||| |||||||||||||| |||||||| |||||||| |
+Sbjct  1656  TCCTGGGCTGCAACAACTTCAAGGTGATTGACATGGGCGTGATGGTGCCATGCGAAAATA  1597
+
+Query  2831  TCCTGGAAAGAGCCGTTCAGGAGAAGGTTGACGTCATTGGCCTCTCTGGCTTGATCACTC  2890
+             |||||||||  ||||| ||||||||||| || ||| | || || || ||  | ||||| |
+Sbjct  1596  TCCTGGAAAAGGCCGTCCAGGAGAAGGTGGATGTCGTAGGACTTTCCGGGCTCATCACAC  1537
+
+Query  2891  CCTCCTTGGACGAGATGGTTTACGTCGCAGAACAGATGAAGGCCCGAAACATGAAGCTTC  2950
+             | |||||||| |||||||||||||| || || ||||||||||| ||   ||||||| | |
+Sbjct  1536  CTTCCTTGGATGAGATGGTTTACGTTGCTGAGCAGATGAAGGCTCGCGGCATGAAGGTGC  1477
+
+Query  2951  CCCTCATGATCGGCGGGGCAACAACCTCGAAGCGGCACACGGCCGTGAAGCTTCA-GCCG  3009
+             |  | ||| |||| || || || || ||||||||||||||||| ||||||  ||| | | 
+Sbjct  1476  CGTTGATGGTCGGTGGCGCCACCACATCGAAGCGGCACACGGCGGTGAAG-ATCACGACC  1418
+
+Query  3010  AAGTATGACCACGGCGTCATCCACGTCCTGGACGCTTCGAGGAGCTGCACTGTTGTCAGC  3069
+             ||||| ||| ||||||| || ||||||||||| ||    || |||||||| || ||||||
+Sbjct  1417  AAGTACGACAACGGCGTGATTCACGTCCTGGATGCGAGCAGAAGCTGCACCGTGGTCAGC  1358
+
+Query  3070  TC-TTGCCTCTCCAGCGAGAAGCAGAGCTATTTGGAGGACATCAAGGATGAGTACATG--  3126
+              |  || || ||| | || |||||||  ||| |||| || |||||||| | | | |||  
+Sbjct  1357  GCACTG-CTGTCCGGAGACAAGCAGACGTATCTGGACGAGATCAAGGA-G-GAATATGCT  1301
+
+Query  3127  GAGATCCGCGAGGAGTACTACGCGACTTTGGTGGATAAGAAGTGGAAGACCTTGGCGCAG  3186
+             || ||| | ||||| ||||||||||||||| | || |||||||||||| |  ||  | ||
+Sbjct  1300  GAAATCAGGGAGGAATACTACGCGACTTTGATCGACAAGAAGTGGAAGTCGCTGAAGGAG  1241
+
+Query  3187  GCTCAGAGCAAGAAACCCGAGATCGATTGGTCGTTGACT-CCTCCGAAGCCAAAGTTCAT  3245
+             || |||  |||||| || ||| | ||||||     | || || |||||||| |||||| |
+Sbjct  1240  GCGCAGTCCAAGAAGCCTGAGCTGGATTGGGGCAAG-CTGCCGCCGAAGCCGAAGTTCGT  1182
+
+Query  3246  TGGAAATCTT-TTCATCAAGGAGCATTCAATCGCGGAGATCATTGAGTACATTGATTGGA  3304
+             ||| || ||| | ||||||||| ||  | ||||  || ||||| || ||||| || ||||
+Sbjct  1181  TGGCAA-CTTGTGCATCAAGGACCACCCCATCGATGAAATCATGGAATACATCGACTGGA  1123
+
+Query  3305  CACCTTTCTTCCAGGTTTACCAGCTGCGAGGGAAGTACCCGAACCGCGACTACCCCGCCA  3364
+             | || ||||||||||| |||||||| || || |||||||| || |||||||||||   ||
+Sbjct  1122  CTCCCTTCTTCCAGGTGTACCAGCTTCGCGGCAAGTACCCCAATCGCGACTACCCTCACA  1063
+
+Query  3365  TCTTCAAGGACGCGCGTGTCGGTGGC-GAGGCACAGAAGCTGTACGCAGAGGCCAAGGAG  3423
+             |||||||||| | ||| || ||   | || ||| ||||||| |    |||||| ||||| 
+Sbjct  1062  TCTTCAAGGATGAGCGCGT-GGGCCCTGAAGCAAAGAAGCTCTTTCAAGAGGCGAAGGAC  1004
+
+Query  3424  ATGCTTGATTGGGTCGTCAAGGAGAACATCTTGCAGGCCTCCGGCGTCGTCGGCATCTGG  3483
+             ||| | |  ||| | ||||| |||  | |  || ||  ||| |||||||| || |||   
+Sbjct  1003  ATGTTGGCCTGGATTGTCAAAGAGGGCTTGCTGAAGTGCTCAGGCGTCGTGGGAATCCAT  944
+
+Query  3484  CCGGCGAACTCCGTGGGCGATGACATCGAGGTCTACACCAGCGAGGCCCGTGACGAGGTT  3543
+             ||||| ||  | || || |||||||||||||||||||| ||||||| |||||||   || 
+Sbjct  943   CCGGCCAATGCGGTCGGTGATGACATCGAGGTCTACACGAGCGAGGACCGTGACACCGTG  884
+
+Query  3544  GCTTGCAAGTTTTACGGCCTCCGTCAGCAGCTTGACATGAGTGAGACCACCTATTGGTGC  3603
+                |||||||| ||||| || || |||||| | |||||| | ||| |||| |  ||||||
+Sbjct  883   AAGTGCAAGTTCTACGGGCTGCGCCAGCAGTTGGACATGGGCGAGTCCACATTCTGGTGC  824
+
+Query  3604  CAGGGTGACTTCATTGCGCCGAAGGGCGTCGCCCCCGACTACATCGCCGCCTTCGCCAAC  3663
+             ||||||||||||||||| ||||||||| |   | ||||||||||| |||| || |||  |
+Sbjct  823   CAGGGTGACTTCATTGCCCCGAAGGGC-T--ACTCCGACTACATCTCCGCTTTTGCCTGC  767
+
+Query  3664  ACGGGCGGCTTGGGCTGCCACGAGCAGAGGCAGAAGTTTGAGGCATCTGGCGACATTGAC  3723
+             ||||||||| | || |||||||||||  | |||||||| ||||     ||||| ||||| 
+Sbjct  766   ACGGGCGGCATCGGATGCCACGAGCAACGCCAGAAGTTCGAGGAGAAGGGCGAGATTGAT  707
+
+Query  3724  AAGGCCATCCTCTTGGAGGCCGTGGCAGATCG-CTTGGCTGAGGCCTTTGCAGAGCTCAT  3782
+              |||| |||||| |||||||||||||||| || ||| || |||||||| || ||||| ||
+Sbjct  706   CAGGCAATCCTCCTGGAGGCCGTGGCAGACCGGCTT-GCGGAGGCCTTCGCCGAGCTGAT  648
+
+Query  3783  CCACCAGAAGATCCGGACCACGCTGTGGGGCT--ACGCCGCAGACGAGAAGCTCTCCCTG  3840
+             ||| | ||||||||| ||||||||||||||||   || | | || |||||||| ||| ||
+Sbjct  647   CCATCTGAAGATCCGAACCACGCTGTGGGGCTTTTCG-C-CTGATGAGAAGCTGTCCTTG  590
+
+Query  3841  GATGACTTGCTCAAGGTGCGGTACCAGGGCATCCGCCCCGCCCCTGGCTATCCCTCTCAG  3900
+             || ||| |||| ||||||   ||||||||||| ||||| ||||| || ||||| || |||
+Sbjct  589   GAGGACATGCTGAAGGTGAAATACCAGGGCATTCGCCCTGCCCCGGGTTATCCTTCCCAG  530
+
+Query  3901  CCCGACCACCGCGAGAAACAGACTTTGTGGGATCTCTTGGACATCGACCGGCTATCGGAG  3960
+             ||||||||| | |||||  ||||| ||||||| ||  ||||  | ||| ||||  | || 
+Sbjct  529   CCCGACCACAGAGAGAAGAAGACTCTGTGGGACCTTCTGGAGGTGGACAGGCTGACAGAT  470
+
+Query  3961  GGCAAGCTCAATCTCACCGAGTCCTACATGATGATGCCCAGTGCCTCCGTGTACGCCCTC  4020
+             |  |||||    || ||||||||||||||||||||||| || ||||| ||||  || || 
+Sbjct  469   GAGAAGCTGTCCCTGACCGAGTCCTACATGATGATGCCAAGCGCCTCTGTGTCGGCTCTG  410
+
+Query  4021  GTCTTCGCACACCCGGAGGCCAAGTACTTTTCCGTTGGACAAGTGAACAAGGATCAGGTC  4080
+             ||||||||||||||||||||||||||||| || ||||| || || |||   |||||||| 
+Sbjct  409   GTCTTCGCACACCCGGAGGCCAAGTACTTCTCTGTTGGCCAGGTCAACGTTGATCAGGTG  350
+
+Query  4081  GAGGCCTACGCTGCACGCCGTGGCGAGACCAGCGTCGAGTCAACAGAGCGTTGGCTTGGC  4140
+              || | ||| | |  || ||||| ||| |  |||| |||   || ||||| ||||| || 
+Sbjct  349   CAGTCTTACTCGGAGCGTCGTGGGGAGGCAGGCGTAGAGGGGACGGAGCGCTGGCTGGGG  290
+
+Query  4141  AGCACCGTCCTCGGCTATGAGAA  4163
+             |||||||| || ||||| |||||
+Sbjct  289   AGCACCGTGCTGGGCTACGAGAA  267
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 341508063248
+
+
+Query= MW558488 [organism=Scrippsiella trochoidea] [strain=STIOCAS]
+B12-independent methionine synthase (MetE) 1 mRNA, complete cds
+
+Length=1699
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 129656348536
+
+
+Query= MW558489 [organism=Scrippsiella trochoidea] [strain=STIOCAS]
+B12-independent methionine synthase (MetE) 2 mRNA, complete cds
+
+Length=1526
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 116425080000
+
+
+Query= MW558490 [organism=Symbiodinium sp.] [strain=CCMA128] B12-dependent
+methionine synthase (MetH) mRNA, complete cds
+
+Length=4275
+                                                                      Score     E
+Sequences producing significant alignments:                          (Bits)  Value
+
+TRINITY_DN21449_c0_g1_i1 len=4380 path=[1:0-95 74:96-137 116:138-...  4795    0.0  
+
+
+>TRINITY_DN21449_c0_g1_i1 len=4380 path=[1:0-95 74:96-137 116:138-366 
+345:367-829 11028:830-853 832:854-1051 11027:1052-1075 
+1054:1076-1152 11021:1153-1176 1155:1177-1524 11019:1525-1548 
+1527:1549-1605 1584:1606-1653 1632:1654-1701 11029:1702-1725 
+1704:1726-2134 11023:2135-2158 2137:2159-2238 2217:2239-2286 
+11024:2287-2310 2289:2311-2345 11031:2346-2369 2348:2370-2393 
+2372:2394-2421 2400:2422-2435 2414:2436-2460 2439:2461-2463 
+10767:2464-2487 2466:2488-2501 2480:2502-2574 11025:2575-2598 
+2577:2599-2733 9869:2734-2763 2742:2764-2787 2766:2788-2793 
+2772:2794-2811 2790:2812-2817 2796:2818-2849 11030:2850-2873 
+2852:2874-3023 11022:3024-3047 3026:3048-3756 9149:3757-3795 
+3774:3796-3996 11026:3997-4020 3999:4021-4134 4113:4135-4220 
+11020:4221-4244 4223:4245-4379] [-1, 1, 74, 116, 
+345, 11028, 832, 11027, 1054, 11021, 1155, 11019, 1527, 1584, 
+1632, 11029, 1704, 11023, 2137, 2217, 11024, 2289, 11031, 
+2348, 2372, 2400, 2414, 2439, 10767, 2466, 2480, 11025, 2577, 
+9869, 2742, 2766, 2772, 2790, 2796, 11030, 2852, 11022, 
+3026, 9149, 3774, 11026, 3999, 4113, 11020, 4223, -2]
+Length=4380
+
+ Score = 4795 bits (2596),  Expect = 0.0
+ Identities = 3617/4120 (88%), Gaps = 30/4120 (1%)
+ Strand=Plus/Minus
+
+Query  24    AGTTTT-GAGTGCCGGAATTTGCTTCCTGCTCTCACATACTCTCGCGAGCGGCGCC-AGT  81
+             |||||| ||||||| | | ||| ||||| || |||  |||||||||||||||||||  ||
+Sbjct  4355  AGTTTTCGAGTGCCTGCACTTGGTTCCTTCTTTCAATTACTCTCGCGAGCGGCGCCCCGT  4296
+
+Query  82    ACCTCGCGCGAGGAGTGAAGCCAGAAGCCGTT--G-TGCACGACCTTCGAGGTTTTTCCC  138
+             |||||||  |||||| ||||  || | |  ||  | ||||||| |  | ||||||| | |
+Sbjct  4295  ACCTCGCAAGAGGAGCGAAGATAGGACCTTTTCAGTTGCACGA-C--CAAGGTTTTCCAC  4239
+
+Query  139   GATGAAGCTCTTCAAGTCCAGCACCCCCGAGCAACAGCTCGGGTCGCTGAGGTCTCAGAA  198
+              ||||||||||||||| |||||||||||||||||||  | | ||||||||||||||||||
+Sbjct  4238  AATGAAGCTCTTCAAGCCCAGCACCCCCGAGCAACAAATTGAGTCGCTGAGGTCTCAGAA  4179
+
+Query  199   GTGGGAAGTCGAATGCACGGCCGAACATGTGCAGCCGAAGCCTGGCTGCAAGCTCGTGGA  258
+             ||| || || || |||||||| ||||| |||||||||||  | |||||||| ||||||||
+Sbjct  4178  GTGCGAGGTTGAGTGCACGGCAGAACACGTGCAGCCGAAAGCAGGCTGCAAACTCGTGGA  4119
+
+Query  259   CCCATGCCGCGTGGAGGGCGCGCAGGAGACGCAGAAGGTGACGCAGAAGATCATCGAGGG  318
+             ||| ||||||||||||||| |||| ||||||||||||||| | |||||||| || ||| |
+Sbjct  4118  CCCCTGCCGCGTGGAGGGCCCGCAAGAGACGCAGAAGGTGGCCCAGAAGATTATTGAGTG  4059
+
+Query  319   CAAGACGCCCACGCCCACGGAGGTGGTGAACTACTTCAACGGCGAGTTGAAGAAGCGCAT  378
+             |||||| || || || ||||||||| | ||||||||||| || |||||||||||||||||
+Sbjct  4058  CAAGACCCCAACACCTACGGAGGTGATCAACTACTTCAATGGTGAGTTGAAGAAGCGCAT  3999
+
+Query  379   CTGCTTCCTTGATGGCGGCATGGGAACCCGCATCCAGGCGGAGAGTTTGGAGGAGGCGGA  438
+              |||||||| ||||| ||||||||||||||||| ||||| ||||  ||||||||||| ||
+Sbjct  3998  TTGCTTCCTGGATGGTGGCATGGGAACCCGCATTCAGGCAGAGAACTTGGAGGAGGCAGA  3939
+
+Query  439   CTACCGTGGAGACCGGTTCAAGGACTTCAGCGAGAAGGACGCCAATGGCATCCCCGTGTC  498
+             ||||||||| || |||||||||||||||||||||||||| ||||| |||||||| || ||
+Sbjct  3938  CTACCGTGGGGATCGGTTCAAGGACTTCAGCGAGAAGGATGCCAACGGCATCCCGGTCTC  3879
+
+Query  499   CCTGAAGGGCAACAATGACCTCCTGATCTTTAGCAAGCCGGACATGGTCAAGGACATCCA  558
+             ||||||||||||||| ||||| || ||||| |||||||| |||||| |||||||||||||
+Sbjct  3878  CCTGAAGGGCAACAACGACCTGCTCATCTTCAGCAAGCCAGACATGATCAAGGACATCCA  3819
+
+Query  559   CAAGGAATATTTCATGGCTGGCTCGGACATCTGTGAGACCAACACCTTCAACGGCACCAC  618
+             |||||| || ||   ||||||||| |||||||| ||||||||||| |||||||||||  |
+Sbjct  3818  CAAGGAGTACTTTGCGGCTGGCTCAGACATCTGCGAGACCAACACTTTCAACGGCACGGC  3759
+
+Query  619   CATCTCACAAGGCGAGTACAAGATGCAGGCCGTTGTGCATGAGATGAACAAGGTGGGAGC  678
+             |||||| || ||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  3758  CATCTCGCAGGGCGAGTACAAGATGCAGGCCGTTGTGCATGAGATGAACAAGGTGGGAGC  3699
+
+Query  679   AGAGCTGGCCAAGAAGGCAGCGGCCGAGGTGACGAAGGAGGAGCCGCACAAGCCCCGGTT  738
+             | ||||||| ||||||||||| ||||||||||||||||||||||||||||||||||| ||
+Sbjct  3698  ACAGCTGGCGAAGAAGGCAGCAGCCGAGGTGACGAAGGAGGAGCCGCACAAGCCCCGATT  3639
+
+Query  739   CGTGGCTGGGGCGGTTGGACCCACCAGCCGCACGCTGAGCGTGTCGCCCAGTGTGGAGGA  798
+             |||||| || || ||||| |||||||||||||| |||||||||||||| |||||||||||
+Sbjct  3638  CGTGGCAGGCGCAGTTGGGCCCACCAGCCGCACCCTGAGCGTGTCGCCAAGTGTGGAGGA  3579
+
+Query  799   CCCATCCTTCCGCAACGTGACCTGGGATGAGTTGGTTGATGCCTACAAGCAGCAGGTCAG  858
+              |||||||||||||||||||||||||| ||| | || ||  |||||||||||||||| ||
+Sbjct  3578  TCCATCCTTCCGCAACGTGACCTGGGACGAGCTTGTGGAGTCCTACAAGCAGCAGGTGAG  3519
+
+Query  859   TGGTCTCGTGGATGGCGGTGTCGACCTCCTGATGATCGAGACGGTCTTCGACACCCAGAA  918
+              ||||||||||| ||||| |||||||| |||||||| ||||| || |||||||| |||||
+Sbjct  3518  CGGTCTCGTGGACGGCGGCGTCGACCTGCTGATGATTGAGACTGTTTTCGACACACAGAA  3459
+
+Query  919   CTGTAAGGCCGCCATCTTTGCGGTGGATCAGTACTTCCTGGAGACGAAGAAGGAGCGACT  978
+             ||| ||||| ||||||||||| ||||| ||||||||| | ||| ||||||||||||| ||
+Sbjct  3458  CTGCAAGGCTGCCATCTTTGCAGTGGACCAGTACTTCATCGAGTCGAAGAAGGAGCGGCT  3399
+
+Query  979   CCCCGTGATGCTCAGCGCCACGATCGTGGACAACAGCGGCCGCACCCTCTCTGGGCAAAC  1038
+              || |||||||| ||||||||||||||||||||||| |||||||| || ||||| || ||
+Sbjct  3398  GCCAGTGATGCTTAGCGCCACGATCGTGGACAACAGTGGCCGCACGCTGTCTGGTCAGAC  3339
+
+Query  1039  CATCGAGGCCTTCTACGTGAGCGTGAAGCACGCGCAGCCCTTCACCGTCGGCATCAACTG  1098
+             |||||||||||||||||| || |||||||| |||||||||||||| || || || |||||
+Sbjct  3338  CATCGAGGCCTTCTACGTCAGTGTGAAGCATGCGCAGCCCTTCACGGTTGGAATTAACTG  3279
+
+Query  1099  TGCCTTGGGCGCTGGC-CAGATGAAGGGCTTCTACAAGAAGCTGGCCGACATGAACACGG  1157
+             |||| |||| || ||| |||||||||||||||||||||||||||  |||||||||| | |
+Sbjct  3278  TGCCCTGGGTGC-GGCTCAGATGAAGGGCTTCTACAAGAAGCTGTGCGACATGAACTCAG  3220
+
+Query  1158  GCTGGTGCCATGTCTACCCCAATGCCGGCCTGCCCAACGCCATGGGTGGCTACGATGAGG  1217
+              |||||||||||||||||||||||| ||||||||||| |||||||| ||||| || ||||
+Sbjct  3219  CCTGGTGCCATGTCTACCCCAATGCTGGCCTGCCCAATGCCATGGGCGGCTATGACGAGG  3160
+
+Query  1218  ACCCCGAGATCTTCTCCACCAACATCTTGGACTACGCCAAGGATGGCATCCTGAACTTTG  1277
+             | || ||||||||||||| ||||||| ||||||||||||||||||||||||||||||| |
+Sbjct  3159  ATCCAGAGATCTTCTCCAGCAACATCCTGGACTACGCCAAGGATGGCATCCTGAACTTCG  3100
+
+Query  1278  TCGGGGGCTGCTGCGGCACCTTCCCCTCCCACATTGCGGCGGTCTGCAAGAAGGTGAAGG  1337
+             |||| || ||||||||||||||||| |||||||||||||| ||||||||||||||| |||
+Sbjct  3099  TCGGCGGTTGCTGCGGCACCTTCCCTTCCCACATTGCGGCTGTCTGCAAGAAGGTGCAGG  3040
+
+Query  1338  ACTGCCCGGTGCGCAAGCTGCCGGAGATCCCCAAGTACCCCACAATGATGCTTTCTGGCC  1397
+             | ||||| |||||||||||||| ||| | |||||||||||||  |||||| | |||||||
+Sbjct  3039  ATTGCCCAGTGCGCAAGCTGCCAGAGCTTCCCAAGTACCCCAGCATGATGTTGTCTGGCC  2980
+
+Query  1398  TGGAGCCATGCAGCGTGGACAAG-GAGGCGGGCTTCCAGTGGGTCGGTGAGCGTTGCAAC  1456
+             ||||||| |||  |||| ||    ||||| ||||||||||||||||| ||||| ||||||
+Sbjct  2979  TGGAGCCTTGCCACGTG-ACGGCTGAGGCAGGCTTCCAGTGGGTCGGCGAGCGATGCAAC  2921
+
+Query  1457  CTGATGGGTTCGGCCAAGTTCAAGAAGCTTGTGGATGCCTACAAGTGGGATGAAGCAATG  1516
+              ||||||| || ||||| ||||||||||| ||||||||||||||||||||||| || |||
+Sbjct  2920  TTGATGGGCTCAGCCAAATTCAAGAAGCTGGTGGATGCCTACAAGTGGGATGAGGCTATG  2861
+
+Query  1517  GAGGTTTGCGTCGCCCAGTGCGAGAAGAAGGCAGACATCCTGGACTTCAATTTCGACTCA  1576
+             ||||||||| | |||||||| ||||||||||| ||||| || || ||||| |||||||| 
+Sbjct  2860  GAGGTTTGCATTGCCCAGTGTGAGAAGAAGGCGGACATTCTCGATTTCAACTTCGACTCG  2801
+
+Query  1577  GACCTTATCGACGGGCAGTCGGCCATGAGCAAGTTCATGAGACTCTGCGTCACCGAGCCC  1636
+             ||||||||||||||||| ||||||||||||||||||||||| ||||||||||| ||||||
+Sbjct  2800  GACCTTATCGACGGGCAATCGGCCATGAGCAAGTTCATGAGGCTCTGCGTCACAGAGCCC  2741
+
+Query  1637  ACCGTGGCCAAGCTGCCTTTCATGATCGACTCCTCAAAGTGGCCTGTGGTCGAGGAGGGC  1696
+             ||||||||||||||||| ||||||||||||||||| |||||||| |||||||| ||||||
+Sbjct  2740  ACCGTGGCCAAGCTGCCCTTCATGATCGACTCCTCCAAGTGGCCCGTGGTCGAAGAGGGC  2681
+
+Query  1697  CTGAAGTGCGTGCAGGGCAAGTGCATCGTGAACTCGATCTCCCTGAAGGTTGGTGAGGAA  1756
+             || || |||||||||||||||||||||||||| ||||| || |||||||| || ||||||
+Sbjct  2680  CTCAAATGCGTGCAGGGCAAGTGCATCGTGAATTCGATTTCACTGAAGGTCGGCGAGGAA  2621
+
+Query  1757  GAGTTCCTTCGTCAGGCCAAGCTTTGCATGCGCTACGGCGCCGCCGTGGTCATCATGGCC  1816
+             ||||| ||||||||||| ||||||||||||||||| || || || ||||| |||||||||
+Sbjct  2620  GAGTTTCTTCGTCAGGCGAAGCTTTGCATGCGCTATGGTGCAGCTGTGGTTATCATGGCC  2561
+
+Query  1817  TTCGATGAGAAGGGCCAGGCAGCCACATTCGAGGACAAGGTCCGCATCTGCCAGCGCAGC  1876
+             ||||||||| |||| ||||| ||||| |||||||||||||| ||||||||||||||||||
+Sbjct  2560  TTCGATGAGCAGGGTCAGGCGGCCACCTTCGAGGACAAGGTTCGCATCTGCCAGCGCAGC  2501
+
+Query  1877  TACAGGGTG-CTGCGAGAGAACCTGGACTTTCCGCCGGAGGATATCATCTTCGACTGCAA  1935
+             |||||| || ||||| |||||| | ||||| ||||| ||||| || |||||||| |||||
+Sbjct  2500  TACAGG-TGCCTGCGCGAGAACATTGACTTCCCGCCCGAGGACATTATCTTCGATTGCAA  2442
+
+Query  1936  CGTGCTGACGATCGCCACGGGCCTGCCGGAGCACAACTCCTACGCCATCGACTTCATCAA  1995
+             |||  |||| |||||||| || |||||||||||||||||||||||| |||||||||||||
+Sbjct  2441  CGTCTTGACCATCGCCACCGGACTGCCGGAGCACAACTCCTACGCCGTCGACTTCATCAA  2382
+
+Query  1996  CGCGGTGGCCGAGATCAAGCGCACCTGCCCGTGCGTCTCCTTCTCCGGGGGCCTGAGCAA  2055
+              || ||||| |||||||||||||||||||| |||||||||||||| || ||| |||||||
+Sbjct  2381  TGCCGTGGCGGAGATCAAGCGCACCTGCCCATGCGTCTCCTTCTCTGGAGGCTTGAGCAA  2322
+
+Query  2056  CCTGTCTTTCTCCTTCCGTGGCCTCAGCTCCCTCCGGGACGCCATGCACAGCGTGTTCCT  2115
+             |||||||||||||||||| ||||| | |||||| ||||| ||||||||||||||||||||
+Sbjct  2321  CCTGTCTTTCTCCTTCCGCGGCCTGAACTCCCTTCGGGATGCCATGCACAGCGTGTTCCT  2262
+
+Query  2116  TTACCACGCGATCCCCAAGGGATTGAACATGTCCATCGTGAACCCGGGAGGCCTGCCCCG  2175
+              ||||||||  | ||||||||  ||||||||||||||||||||||||||||||| |||||
+Sbjct  2261  CTACCACGCAGTGCCCAAGGGTCTGAACATGTCCATCGTGAACCCGGGAGGCCTTCCCCG  2202
+
+Query  2176  ATACGAC-GACATCGATGCCCACTCTCGCAAGTTGGCGGAGGAGGTGATCCTGAACCAAT  2234
+              ||| || |||||||| |   || | |||||| ||||||| ||||||||||||||||| |
+Sbjct  2201  CTAC-ACGGACATCGACGAGAACACACGCAAGCTGGCGGAAGAGGTGATCCTGAACCAGT  2143
+
+Query  2235  CGGCGGATGGCAAGCATGTCGAGCGCTTCCTGGAGTACGCAGAGGCAGTGCGCCAGCCCG  2294
+             | || | ||||||||| ||||||||||||||||||||||| |||||||| ||| |||| |
+Sbjct  2142  CTGCAGCTGGCAAGCACGTCGAGCGCTTCCTGGAGTACGCCGAGGCAGTTCGCAAGCCTG  2083
+
+Query  2295  CCCCAGCCGCTTCCAGCGGCGCTTCCAGCGGTGGGGCGGCTCCCGCCAAGGACGCCTGGC  2354
+             |||| |  ||| |  | || ||| |  | |||||  | |||||||||||||| |||||||
+Sbjct  2082  CCCC-G--GCTGCGGGTGGTGCTGC--G-GGTGG--C-GCTCCCGCCAAGGATGCCTGGC  2032
+
+Query  2355  GCAGCGGCACTTACACAGAGCGCCTTCACCACGGGCTGATCAACGGCATTGACAAGTTCA  2414
+             | |||||||| | ||||||||| || ||| | |||||||||||||| || ||||||||||
+Sbjct  2031  GAAGCGGCACATTCACAGAGCGTCTGCACTATGGGCTGATCAACGGTATCGACAAGTTCA  1972
+
+Query  2415  TTGAGCAGGATACCGAGGAGGCGCGGGCAGCCCTCAACGTCCCGCTGCACGTCATCGAGG  2474
+             |||||  ||||||||||||||| |||||||  || ||  |||||||| | ||||||||||
+Sbjct  1971  TTGAGGGGGATACCGAGGAGGCCCGGGCAGAACTGAAAATCCCGCTGAAAGTCATCGAGG  1912
+
+Query  2475  GGCCACTGATGCAAGGCATGGGCATCATCGGAGACCTGTTTGGGTCAGGCAAGATGTTCT  2534
+             ||||  ||||| ||||||||||||||||||| ||||| || || || || ||||||||||
+Sbjct  1911  GGCCGTTGATGGAAGGCATGGGCATCATCGGCGACCTTTTCGGATCCGGAAAGATGTTCT  1852
+
+Query  2535  TGCCGCAGGTCATCAAGAGCGCGCGAGTCATGAAGAAGGCTGTGGCCTACCTCACTCCCT  2594
+             |||||||||||||||||||||| ||||||||||||||||| ||||| ||||| || ||||
+Sbjct  1851  TGCCGCAGGTCATCAAGAGCGCACGAGTCATGAAGAAGGCCGTGGCGTACCTGACCCCCT  1792
+
+Query  2595  TCATGGAAGAAGAGAGGCGTGCAGCCGCCATTGCAGCGGGCGAGGACCCCAACCAGCCCA  2654
+             ||||||| || || ||||||||||||||| | || || |||||||||||  | |||||||
+Sbjct  1791  TCATGGACGACGAAAGGCGTGCAGCCGCCCTGGCTGCCGGCGAGGACCCTGATCAGCCCA  1732
+
+Query  2655  AGTACAACGGAACCGTGCTGATGGCAACCGTGAAGGGAGATGTGCACGACATCGGCAAGA  2714
+             ||||||||||    |||||||||||||| ||||||||||||||||||||||| |||||||
+Sbjct  1731  AGTACAACGGCGTTGTGCTGATGGCAACGGTGAAGGGAGATGTGCACGACATTGGCAAGA  1672
+
+Query  2715  ACATCGTGGGAGTTGTCCTGGGCTGCAACAACTATAAGGTGATTGACATGGGCGTGATGG  2774
+             |||||||||||||||||||||||||||||||||  |||||||||||||||||||||||||
+Sbjct  1671  ACATCGTGGGAGTTGTCCTGGGCTGCAACAACTTCAAGGTGATTGACATGGGCGTGATGG  1612
+
+Query  2775  TGCCTTGCGAGAACATCCTGGACAAAGCCGTCGAGGAGAAGGTGGACGTCATCGGGCTCT  2834
+             |||| ||||| || |||||||| || |||||| ||||||||||||| ||| | || || |
+Sbjct  1611  TGCCATGCGAAAATATCCTGGAAAAGGCCGTCCAGGAGAAGGTGGATGTCGTAGGACTTT  1552
+
+Query  2835  CGGGGCTGATCACGCCGTCCTTGGATGAGATGGTCTACGTGGCTGAGCAGATGAAGGCTC  2894
+             | ||||| ||||| || ||||||||||||||||| ||||| |||||||||||||||||||
+Sbjct  1551  CCGGGCTCATCACACCTTCCTTGGATGAGATGGTTTACGTTGCTGAGCAGATGAAGGCTC  1492
+
+Query  2895  GCGGCATGAAGTTGCCTTTGATGATCGGCGGTGCCACCACGTCGAAGCGACACACGGCGG  2954
+             ||||||||||| |||| |||||| |||| || |||||||| |||||||| ||||||||||
+Sbjct  1491  GCGGCATGAAGGTGCCGTTGATGGTCGGTGGCGCCACCACATCGAAGCGGCACACGGCGG  1432
+
+Query  2955  TGAAGATCACCACGAAATACGACAACGGCGTCATTCACGTCTTGGATGCAAGCAGAAGCT  3014
+             |||||||||| || || |||||||||||||| ||||||||| ||||||| ||||||||||
+Sbjct  1431  TGAAGATCACGACCAAGTACGACAACGGCGTGATTCACGTCCTGGATGCGAGCAGAAGCT  1372
+
+Query  3015  GCACGGTGGTCAGCGCACTGCTGTCCGCCGACAAGCAGACGTACATCGACGAGATCAAGG  3074
+             |||| ||||||||||||||||||||||  ||||||||||||||  | |||||||||||||
+Sbjct  1371  GCACCGTGGTCAGCGCACTGCTGTCCGGAGACAAGCAGACGTATCTGGACGAGATCAAGG  1312
+
+Query  3075  AGGAGTACGCTGAGATCAGGGAGGAGTACTACAACACCTTGATCGACAAGAAGTGGAAGA  3134
+             |||| || ||||| ||||||||||| ||||||   || ||||||||||||||||||||| 
+Sbjct  1311  AGGAATATGCTGAAATCAGGGAGGAATACTACGCGACTTTGATCGACAAGAAGTGGAAGT  1252
+
+Query  3135  CGCTGGCTGAGGCACAGAAGAAGAAGCCCCAGCTCGACTGGAGCAAGCTGCCGCCGAAGC  3194
+             |||||   ||||| |||   ||||||||  |||| || ||| ||||||||||||||||||
+Sbjct  1251  CGCTGAAGGAGGCGCAGTCCAAGAAGCCTGAGCTGGATTGGGGCAAGCTGCCGCCGAAGC  1192
+
+Query  3195  CGAAGTTCGTCGGCAACATGTGCCTCAAGGACCATCCCATTGATGAAATCATGGAGTACA  3254
+             |||||||||| |||||| ||||| |||||||||| ||||| |||||||||||||| ||||
+Sbjct  1191  CGAAGTTCGTTGGCAACTTGTGCATCAAGGACCACCCCATCGATGAAATCATGGAATACA  1132
+
+Query  3255  TCGACTGGACCCCCTTCTTCCAGGTGTACCAGCTGCGAGGCAAGTACCCCAACCGCGACT  3314
+             |||||||||| ||||||||||||||||||||||| || |||||||||||||| |||||||
+Sbjct  1131  TCGACTGGACTCCCTTCTTCCAGGTGTACCAGCTTCGCGGCAAGTACCCCAATCGCGACT  1072
+
+Query  3315  ACCCTCACATCTTCAAGGACGAGCGCGTGGGCCCCGAAGCAAAGAAGCTCTTTCAGGAGG  3374
+             ||||||||||||||||||| |||||||||||||| |||||||||||||||||||| ||||
+Sbjct  1071  ACCCTCACATCTTCAAGGATGAGCGCGTGGGCCCTGAAGCAAAGAAGCTCTTTCAAGAGG  1012
+
+Query  3375  CGAAGGACATGTTGGCGTGGATTGTCAAGGAGGGGCTT-CTGAAGTGTTCAGGCGTGGTG  3433
+             |||||||||||||||| ||||||||||| ||||| ||| |||||||| |||||||| |||
+Sbjct  1011  CGAAGGACATGTTGGCCTGGATTGTCAAAGAGGG-CTTGCTGAAGTGCTCAGGCGTCGTG  953
+
+Query  3434  GGAATCCATCCTGCCAATGCCGTCGGTGATGACATCGAGGTCTACACGAACGAGAACCGT  3493
+             ||||||||||| |||||||| |||||||||||||||||||||||||||| |||| |||||
+Sbjct  952   GGAATCCATCCGGCCAATGCGGTCGGTGATGACATCGAGGTCTACACGAGCGAGGACCGT  893
+
+Query  3494  GACACCGTGAAACGCAAGTTCTATGGGCTTCGCCAGCAGCTGGACATGGGCGAGTCCACA  3553
+             |||||||||||  |||||||||| ||||| ||||||||| ||||||||||||||||||||
+Sbjct  892   GACACCGTGAAGTGCAAGTTCTACGGGCTGCGCCAGCAGTTGGACATGGGCGAGTCCACA  833
+
+Query  3554  TACTGGTGCCAGGGTGACTTCATTGCCCCAAAGGACGTAGCCCCGGACTACATCGCTGCG  3613
+             | ||||||||||||||||||||||||||| |||| | || | || ||||||||| | || 
+Sbjct  832   TTCTGGTGCCAGGGTGACTTCATTGCCCCGAAGGGC-TA-CTCC-GACTACATCTCCGCT  776
+
+Query  3614  TTTGCCTGCACGGGCGGCATCGGATGCCACGAGCAACGCCAGAAGTTCGAGGAGAAGGGC  3673
+             ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+Sbjct  775   TTTGCCTGCACGGGCGGCATCGGATGCCACGAGCAACGCCAGAAGTTCGAGGAGAAGGGC  716
+
+Query  3674  GAGATTGACCAGGCGATCTTGCTGGAGGCCGTGGCAGACAGGCTTGCGGAGGCCTTCAGT  3733
+             |||||||| ||||| ||| | |||||||||||||||||| |||||||||||||||||   
+Sbjct  715   GAGATTGATCAGGCAATCCTCCTGGAGGCCGTGGCAGACCGGCTTGCGGAGGCCTTCGCC  656
+
+Query  3734  GAGCTCATCCACTTGAAGATCCGAACCACTCTCTGGGGCTACTCGCCCGACGAGAAGCTG  3793
+             ||||| |||||  |||||||||||||||| || |||||||  ||||| || |||||||||
+Sbjct  655   GAGCTGATCCATCTGAAGATCCGAACCACGCTGTGGGGCTTTTCGCCTGATGAGAAGCTG  596
+
+Query  3794  TCTTTGTCGGACATGCTGAAGGTGAAGTATCAGGGCATTCGCCCTGCCCCGGGATATCCG  3853
+             || |||  |||||||||||||||||| || ||||||||||||||||||||||| ||||| 
+Sbjct  595   TCCTTGGAGGACATGCTGAAGGTGAAATACCAGGGCATTCGCCCTGCCCCGGGTTATCCT  536
+
+Query  3854  TCCCAACCTGACCACCGAGAGAAGAAGACGCTGTGGGACCTTCTGGAAGTGGACAGGCTG  3913
+             ||||| || |||||| ||||||||||||| ||||||||||||||||| ||||||||||||
+Sbjct  535   TCCCAGCCCGACCACAGAGAGAAGAAGACTCTGTGGGACCTTCTGGAGGTGGACAGGCTG  476
+
+Query  3914  ACTGATGAGAAGATCTCCCTGACGGAGTCCTACATGATGATGCCGAGCGCATCCGTGTCG  3973
+             || ||||||||| | |||||||| |||||||||||||||||||| ||||| || ||||||
+Sbjct  475   ACAGATGAGAAGCTGTCCCTGACCGAGTCCTACATGATGATGCCAAGCGCCTCTGTGTCG  416
+
+Query  3974  GCGCTGGTGTTCGCCCACCCACAGGCCAAGTACTTCTCGGTGGGCCAGGTCAATGTTGAT  4033
+             || ||||| ||||| |||||  |||||||||||||||| || ||||||||||| ||||||
+Sbjct  415   GCTCTGGTCTTCGCACACCCGGAGGCCAAGTACTTCTCTGTTGGCCAGGTCAACGTTGAT  356
+
+Query  4034  CAGGTGCAGTCCTACTCCCAGCGACGCGGCGAGACCGGTGTGGAGGGGACGGAGCGCTGG  4093
+             ||||||||||| |||||  |||| || || ||| | || || ||||||||||||||||||
+Sbjct  355   CAGGTGCAGTCTTACTCGGAGCGTCGTGGGGAGGCAGGCGTAGAGGGGACGGAGCGCTGG  296
+
+Query  4094  CTGGGAAACACCGTGCTGGGCTATGAGAAGCGATGATGGC  4133
+             ||||| | ||||||||||||||| ||||||| ||||||||
+Sbjct  295   CTGGGGAGCACCGTGCTGGGCTACGAGAAGCAATGATGGC  256
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 329034651682
+
+
+Query= MW558491 [organism=Effrenium voratum] B12-dependent methionine
+synthase (MetH) mRNA, complete cds
+
+Length=4356
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 335310094768
+
+
+Query= MW558492 [organism=Effrenium voratum] B12-independent methionine
+synthase (MetE) mRNA, partial cds
+
+Length=1095
+
+
+***** No hits found *****
+
+
+
+Lambda      K        H
+    1.33    0.621     1.12 
+
+Gapped
+Lambda      K        H
+    1.28    0.460    0.850 
+
+Effective search space used: 82972273680
+
+
+  Database: SSA01_assembly_longest_20180726.fa
+    Posted date:  May 29, 2023  1:17 PM
+  Number of letters in database: 79,464,202
+  Number of sequences in database:  71,057
+
+
+
+Matrix: blastn matrix 1 -2
+Gap Penalties: Existence: 0, Extension: 2.5
