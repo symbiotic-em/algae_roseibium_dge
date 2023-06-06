@@ -1,4 +1,4 @@
-# DGE, GO_MWU and Growth Stats Analysis for Long-Term Cocultures of Symbiodiniaceae-Roseibium 
+# DGE, GO MWU and Growth Stats Analysis for Long-Term Cocultures of Symbiodiniaceae-Roseibium 
 Accompanying script and input/output files to the manuscript in preparation:
 "Symbiodinium-Roseibium establish a stable coculture and exhibit synergistic growth effects" by Emily G Aguirre, et.al
 
