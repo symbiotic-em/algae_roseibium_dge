@@ -44,7 +44,7 @@ Growth stats
 - Round 1, Round 2, Round 3 folders  input files for three subculturing, no B12 trials of SSA01
 
 
-metE/metH BLAST results of SSA01 transcriptome blasted to Lin et al. (2022) found at --> https://doi.org/10.1016/j.fmre.2021.12.014
+BLAST results of SSA01 transcriptome blasted to metE/metH sequences from Lin et al. (2022) found at --> https://doi.org/10.1016/j.fmre.2021.12.014
 - metE_metH_SSA01_BLAST_results  
 
 
