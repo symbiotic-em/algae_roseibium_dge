@@ -1,0 +1,295 @@
+library(tidyverse)
+library(ggpubr)
+library(rstatix)
+library(ggplot2)
+
+setwd("/Users/b12_roseibium/B12_counts_stats")
+b12<-read.csv("b12_roseibium_for_lm_counts.csv")
+b12
+# Change line types by groups (supp)
+ggplot(b12, aes(x=time, y=Counts, group=Treatment)) +
+  geom_line(aes(linetype=Treatment))+ facet_wrap(~Type)+
+  geom_smooth()
+
+# Change line types, point shapes and colors
+ggplot(df, aes(x=dose, y=len, group=supp)) +
+  geom_line(aes(linetype=supp, color = supp))+
+  geom_point(aes(shape=supp, color = supp))
+
+b12$Counts=as.numeric(b12$Counts)
+
+
+
+#+++++++++++++++++++++++++
+# Function to calculate the mean and the standard deviation
+  # for each group
+#+++++++++++++++++++++++++
+# data : a data frame
+# varname : the name of a column containing the variable
+  #to be summarized
+# groupnames : vector of column names to be used as
+  # grouping variables
+data_summary <- function(data, varname, groupnames){
+  require(plyr)
+  summary_func <- function(x, col){
+    c(mean = mean(x[[col]], na.rm=TRUE),
+      sd = sd(x[[col]], na.rm=TRUE))
+  }
+  data_sum<-ddply(data, groupnames, .fun=summary_func,
+                  varname)
+  data_sum <- rename(data_sum, c("mean" = varname))
+ return(data_sum)
+}
+#Summarize the data :
+
+b12_df3 <- data_summary(b12, varname="Counts", 
+                    groupnames= c("Treatment", "time", "Type"))
+head(b12_df3)
+
+write.csv(b12_df3, "growth_curve_summary.csv")
+
+# Simple line plot
+# Change point shapes and line types by groups
+a= ggplot(b12_df3, aes(x=time, y=Counts, group = Treatment, color = Treatment))+ 
+    geom_errorbar(aes(ymin=Counts-sd, ymax=Counts+sd), width=.1, 
+    position=position_dodge(0.05)) +
+scale_y_continuous(trans='log10', "Roseibium counts (CFU/mL)")+
+geom_point(size=5)+
+    stat_smooth()+ 
+scale_color_manual(values=c("#999999", "#E69F00","#660066"), limits=c("low_density", "mid_density", "high_density"))+
+facet_wrap(~Type)+
+       theme_bw()
+
+a + scale_x_continuous(breaks=c(0, 4, 8, 12), "time (weeks)") + theme(text = element_text(size = 20))    
+
+
+############## two-way repeated measures of ANOVA R #################
+b12= read.csv("b12_rose_ssa01.csv") #or see below vvv to subset the starved rose counts vvv
+b12= read.csv("b12_starved_vs_b12coculture_counts.csv")
+#b12=subset(b12, Type %in% c("monoculture")) #subset to starved
+b12
+
+
+#group by treatment and time
+b12_2 <- b12 %>%
+  gather(key = "time", value = "score", Week_0, Week_4, Week_6, Week_8, Week_12) %>%
+  convert_as_factor(Replicates, Treatment, time)
+
+data.frame(head(b12_2, 3))
+# Inspect some random rows of the data by groups
+
+#set.seed(123)
+#b12_2 %>% sample_n_by(split_treatment, time, size = 1)
+
+#get basic stats
+summary= b12_2 %>%
+  group_by(Treatment, time) %>%
+  get_summary_stats(score, type = "mean_sd")
+data.frame(summary)
+
+#write as csv
+#write.csv(b12_2, "rose_coculture_mean_sd_stats.csv")
+#write.csv(b12_2, "rose_starved_mean_sd_stats.csv")
+
+#visualize data you want to test
+bxp <- ggboxplot(b12_2, x = "time", y = "score",
+  color = "Treatment" )
+bxp
+
+#identify outliers
+outlier= b12_2 %>%
+  group_by(Treatment, time) %>%
+  identify_outliers(score)
+data.frame(outlier) #no outliers
+
+##qqplot
+ggqqplot(b12_2, "score", ggtheme = theme_bw()) +
+  facet_grid(time~Treatment, labeller = "label_both")
+
+### two-way repeated measures ANOVA ###########
+#type =3 for type III anova below
+res.aov <- anova_test(
+  data = b12_2, dv = score, wid = Replicates,
+ between = c(Treatment, time), type=3) 
+get_anova_table(res.aov)
+
+#yes for cocultures, statistically significant two-way interactions between treatment and time, 
+#ANOVA Table (type III tests)
+
+#          Effect DFn DFd      F        p p<.05   ges
+#1      Treatment   2  42  1.645 2.05e-01       0.073
+#2           time   6  42 12.007 8.26e-08     * 0.632
+#3 Treatment:time  12  42  2.209 2.90e-02     * 0.387
+
+#also, yes for starved rose cultures
+#ANOVA Table (type III tests)
+#         Effect DFn DFd        F        p p<.05   ges
+#1      Treatment   2  30 18873.07 3.15e-47     * 0.999
+#2           time   4  30 21979.18 1.58e-51     * 1.000
+#3 Treatment:time   8  30 16732.64 1.47e-52     * 1.000
+
+
+####### Post-hoc test
+
+# Effect of time at each level of treatment
+one.way2 <- b12_2 %>%
+  group_by(Treatment) %>%
+  anova_test(dv = score, wid = Replicates, within = time) %>%
+  get_anova_table() %>%
+  adjust_pvalue(method = "bonferroni")
+one.way2
+
+#for cocultures only:
+# A tibble: 3 × 9
+ # Treatment    Effect   DFn   DFd      F        p `p<.05`   ges    p.adj
+ # <fct>        <chr>  <dbl> <dbl>  <dbl>    <dbl> <chr>   <dbl>    <dbl>
+#1 high_density time       6    12  12.0  1.82e- 4 "*"     0.845 5.46e- 4
+#2 low_density  time       6    12 350.   9.4 e-13 "*"     0.993 2.82e-12
+#3 mid_density  time       6    12   1.13 4   e- 1 ""      0.335 1   e+ 0
+
+
+#for starved cultures:
+# A tibble: 3 × 9
+#  Treatment    Effect   DFn   DFd        F        p `p<.05`   ges    p.adj
+#  <fct>        <chr>  <dbl> <dbl>    <dbl>    <dbl> <chr>   <dbl>    <dbl>
+#1 high_density time       4     8 30000.   9.87e-17 "*"     1     2.96e-16
+#2 low_density  time       4     8     3.14 7.9 e- 2 ""      0.544 2.37e- 1
+#3 mid_density  time       4     8  1873.   6.47e-12 "*"     0.998 1.94e-11
+
+
+# Pairwise comparisons between time points
+pwc2 <- b12_2 %>%
+  group_by(Treatment) %>%
+  pairwise_t_test(
+    score ~ time, paired = TRUE,
+    p.adjust.method = "bonferroni"
+    )
+pwc2
+
+#save pwc for reference later 
+write.csv(pwc2, "cocultures_twowayanova_stats.csv")
+write.csv(pwc2, "starved_twowayanova_stats.csv")
+
+#repeat all code above for starved Roseibium  ^^^^^^^^^^^^^^^^^
+
+
+################ three way ANOVA ##############
+#https://www.datanovia.com/en/lessons/repeated-measures-anova-in-r/
+
+b12= read.csv("b12_starved_vs_b12coculture_counts.csv")
+
+# Gather the columns t1, t2 and t3 into long format.
+# Convert id and time into factor variables
+b12_df <- b12 %>%
+  gather(key = "time", value = "score", Week_0, Week_4, Week_6, Week_8, Week_12) %>%
+  convert_as_factor(Replicates, time)
+
+# Inspect some random rows of the data by groups
+set.seed(123)
+b12_df%>% sample_n_by(Treatment, Type, time, size = 1)
+
+b12_df%>%
+  group_by(Treatment, Type, time) %>%
+  get_summary_stats(score, type = "mean_sd")
+
+bxp <- ggboxplot(
+  b12_df, x = "Type", y = "score",
+  color = "time", palette = "jco",
+  facet.by = "Treatment", short.panel.labs = FALSE
+  )
+bxp
+
+#outliers
+b12_df %>%
+  group_by(Treatment, Type, time) %>%
+  identify_outliers(score) #no outliers
+
+
+#normality assumption 
+#Compute Shapiro-Wilk test for each combinations of factor levels:
+
+b12_df %>%
+  group_by(Type, time)%>%
+  shapiro_test(score)
+
+ggqqplot(b12_df, "score", ggtheme = theme_bw()) +
+  facet_grid(Type + Treatment ~ time, labeller = "label_both")
+
+
+#check your df dim 
+b12_df %>%
+  select(Type, Treatment, time) %>%
+  distinct %>% dim
+
+
+
+
+sat = anova_test(
+  data = b12_df, 
+  score ~ Treatment * time,
+  wid = Replicates, type=3)
+
+res.aov=get_anova_table(sat, correction = "GG")
+
+
+res.aov <- anova_test(
+  data = b12_df, dv = score, wid = Replicates,
+ between = c(Type, Treatment, time), type=3) #type =3 for type III anova
+get_anova_table(res.aov)
+
+#Type III tests
+
+#               Effect DFn DFd       F        p p<.05   ges
+#1                Type   1  60 254.475 2.97e-23     * 0.809
+#2           Treatment   2  60 405.255 1.42e-35     * 0.931
+#3                time   4  60 361.637 3.02e-41     * 0.960
+#4      Type:Treatment   2  60   5.139 9.00e-03     * 0.146
+#5           Type:time   4  60  71.348 4.04e-22     * 0.826
+#6      Treatment:time   8  60 357.693 1.22e-47     * 0.979
+#7 Type:Treatment:time   8  60   9.411 2.59e-08     * 0.557
+
+
+#yes, there is stat sig differences between type:treatment: time
+
+#compute simple two-way interaction
+# Two-way ANOVA at each  level
+two.way <- b12_df %>%
+  group_by(Type) %>%
+  anova_test(dv = score, wid = Replicates, between = c(time, Treatment))
+two.way
+
+## Extract anova table
+get_anova_table(two.way)
+#> get_anova_table(two.way)
+# A tibble: 6 × 8
+# Type        Effect           DFn   DFd       F        p `p<.05`   ges
+#* <chr>       <chr>          <dbl> <dbl>   <dbl>    <dbl> <chr>   <dbl>
+#1 cocultures  time               4    30   102.  4.96e-17 *       0.932
+#2 cocultures  Treatment          2    30   107.  2.16e-14 *       0.877
+#3 cocultures  time:Treatment     8    30    96.7 2.81e-19 *       0.963
+#4 monoculture time               4    30 21979.  1.58e-51 *       1    
+#5 monoculture Treatment          2    30 18873.  3.15e-47 *       0.999
+#6 monoculture time:Treatment     8    30 16733.  1.47e-52 *       1  
+
+
+## Pairwise comparisons
+pwc <- b12_df %>%
+  group_by(time, Treatment) %>%
+  pairwise_t_test(score ~ Type, paired = TRUE, p.adjust.method = "bonferroni") %>%
+  select(-df, -statistic) # Remove details
+
+print(pwc, n=51)
+
+write.csv(pwc, "b12mono_vs_b12coculture_stats.csv")
+
+#report
+# Visualization: box plots with p-values
+pwc <- pwc %>% add_xy_position(x = "Type")
+bxp + 
+  stat_pvalue_manual(pwc, tip.length = 0, hide.ns = TRUE) +
+  labs(
+    subtitle = get_test_label(res.aov, detailed = TRUE),
+    caption = get_pwc_label(pwc)
+  )
+
+
