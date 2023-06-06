@@ -7,3 +7,7 @@ All analyses can be re-created by starting with the raw .fastq files available u
 A full annotation of the Roseibium sp. Sym1 genome can be found at JGI IMG/MER under Project ID: Gp0612333, under "Roseibium sp. Sym1 re-assembly" (https://gold.jgi.doe.gov/projects?id=Gp0612333).
 
 #Files in this repository 
+
+DESeq2 analysis
+- 0521_bac_deseq2_by_type_res.csv DESEq2 results by type
+- 
