@@ -1,0 +1,138 @@
+conda activate rna_roseibium #roseibium environment with all your packages: fastqc, bbduk, barrnap, bowtie2, samtools, salmon, perl, fasta-splitter, BUSCO
+
+#quality check reads
+#fastqc files and check output
+#run fastqc
+fastqc *.fastq.gz
+
+#move to your folder of choice 
+#mk new dir
+mkdir fastqc_firstround
+
+mv *fastqc* /fastqc_firstround
+
+#do we need to remove any of the TruSeq Illumina adapter? Look at fastqc output if contamination w adapter sequences, yes!
+# there is quite a bit of illumina adapters and weird sequences left and ribosomal sequences
+
+#get the ribosomal sequences, just to have them, using barrnap --> https://github.com/tseemann/barrnap
+barrnap --quiet corrected_roseibium_assembly_final.fa --outseq roseibium_total_rna_sequences.fa
+
+#use bbduk to get rid of adapter seqs
+
+bbduk.sh -Xmx4g threads=12 in=EA_lib_12_starved_pool_orig_S11_R1_001.fastq.gz out=clean_EA_lib_12_starved_pool_orig_S11_R1_001.fq.gz ref=adapters
+
+#for paired_reads:  
+
+bbduk.sh -Xmx4g threads=12 in1=EA_lib_8_4-1_combo_L001_R1_001.fastq.gz in2=EA_lib_8_4-1_combo_L001_R2_001.fastq.gz out1=no_adap_4-1_R1.fastq.gz out2=no_adap_4-1_R2.fastq.gz ref=adapters
+
+#additionally for the starved pool, get rid of Ts and As in one sample (the "starved" pool) with afterQC
+bbduk.sh -Xmx4g threads=12 in=clean_EA_lib_12_starved_pool_orig_S11_R1_001.fq.gz out=cleaned_starved_pool.fq.gz literal=TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT
+bbduk.sh -Xmx4g threads=12 in=cleaned_starved_pool.fq.gz out=doblecleaned_starved_pool.fq.gz literal=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+
+#check it with fastqc, all good!
+
+#now trim rRNA using the ribokmers.fa.gz https://www.biostars.org/p/159959/, because we did find rRNA and can use the roseibium_total_rna_sequences fasta
+
+bbduk.sh -Xmx4g threads=12 in=EA_lib_12_starved_pool_orig_S11_R1_001.fastq.gz out=clean_EA_lib_12_starved_pool_orig_S11_R1_001.fq.gz ref=ribokmers.fa.gz
+
+#check if annotation transcriptome file is complete with BUSCO
+#because theres a bunch of Symbiodinium reads from Syms that passed through the filters, we will need to give our RNA seqs, choices of places to map
+#genes with high seq homology from syms that are highly conserved (life essentials) might map to bacteria so we want to give them a chance to map to the syms
+
+#concatenate the Roseibium genome and Sym transcriptome to give the reads a chance to map to more things because it's two organism
+cat Ga0573226_prodigal_genes.fna SSA01_assembly_longest_20180726.fa > sym_rose_ref.fa
+
+#then use bowtie2 to index this file, you can build index for rose/sym cat file or just Prodigal annotated fa for rose (for your rose only samples)
+bowtie2-build sym_rose_ref.fa sym_rose.btindex
+
+#now map your reads. -X flag= name of index, -U= unpaired reads, -S= SAM format output file
+#for single end reads 
+bowtie2 --local -x index/sym_rose.btindex  -U input_reads_file1 -S input_reads_file1.sam --no-unal -k 5 --threads 8
+
+#for paired end reads
+bowtie2 --local -x index/sym_rose.btindex  -1 input_reads_file1 -2 input reads_file_2 -S input_reads_file1.sam --no-unal -k 5 --threads 8
+
+#turn .sam files into .bam
+samtools view -S -b clean_3-2.sam > clean_3-2.bam
+
+#now view it
+samtools view clean_3-2.bam | head
+
+#stats
+samtools flagstat clean_3-2.bam
+
+#next step is to quantify counts using salmon in alignment mode, no need to index 
+salmon quant -t transcripts.fa -l SF -a clean_3-2.bam -o clean_3-2_quant
+
+#or with paired ends, the -a to specify automatic detection of library type
+
+salmon quant -t transcripts.fa -l IU -a clean_3-2.bam -o clean_3-2_quant
+
+#rinse, repeat for everyone and now you have a bunch of files with counts
+#see below under the euks for taking all those counts merging them into a count table with all samples 
+#but first, we have to do this with the euks... 
+
+############### putting all the counts and samples together ##########################
+
+#bash script to combine all counts together into one count table
+#prompt: generate a sequence table from salmon quant files with gene name as rows, tpm as columns and include file names for TPM
+
+#answer: Here's a possible Perl script to generate a sequence table from Salmon quant files with gene name as rows, TPM as columns, and file names for TPM:
+
+perl
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+
+my %gene_tpm; # hash to store TPM values for each gene and file
+
+# loop through all the input files
+foreach my $file (@ARGV) {
+    open(my $fh, '<', $file) or die "Error: cannot open file '$file': $!\n";
+    my $header = <$fh>; # skip the header line
+    while (my $line = <$fh>) {
+        chomp $line;
+        my ($gene, $length, $tpm) = (split /\t/, $line)[0, 1, 3];
+        $gene_tpm{$gene}{$file} = $tpm; # store TPM value for this gene and file
+    }
+    close($fh);
+}
+
+# print the output table header
+print "Gene\t", join("\t", @ARGV), "\n";
+
+# loop through all the genes
+foreach my $gene (sort keys %gene_tpm) {
+    print "$gene";
+    # loop through all the input files to get the TPM values for this gene
+    foreach my $file (@ARGV) {
+        if (exists $gene_tpm{$gene}{$file}) {
+            print "\t", $gene_tpm{$gene}{$file};
+        } else {
+            print "\t0";
+        }
+    }
+    print "\n";
+}
+
+
+#USAGE --> perl salmon_seq_table.pl *quant.sf ... > output_table.txt
+#This will generate a sequence table with gene name as rows, TPM values as columns, and the file names as headers for the TPM columns.
+
+################## take out the reads that mapped to algae in the coculture samples meant to analyze bacteria ################
+
+cat bac_count_table.tab | grep -v 'TRINITY' > curated_final_bac_count.tab
+ 
+
+############## to split Roseibium genome fasta into 8 equal parts (to input into eggNOG) to get GO terms #######################
+
+#find out how many sequences
+ grep -c ">" Ga0573226_prodigal_genes.fna #6611
+
+#now split into equal pieces with sequences under 1000 for input into the EggNOG mapper --> http://eggnog-mapper.embl.de/
+#looks like 8 different files is the sweet spot (6611/8= 827 sequences each .fa)
+
+#use fasta splitter on conda 
+
+fasta-splitter --part-size 827 Ga0573226_prodigal_genes.fa --nopad --measure count --out-dir split_fastas_2
