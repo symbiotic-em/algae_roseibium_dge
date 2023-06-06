@@ -1,5 +1,5 @@
 # DGE, GO_MWU and Growth Stats Analysis for Long-Term Cocultures of Symbiodiniaceae-Roseibium 
-Accompanying script and input/output files to the manuscript in preparation --> "Symbiodinium-Roseibium establish a stable coculture and exhibit synergistic growth effects"
+Accompanying script and input/output files to the manuscript in preparation --> "Symbiodinium-Roseibium establish a stable coculture and exhibit synergistic growth effects" by Emily G Aguirre et.al
 
 Here, we grew axenic cultures of S. linucheae (strain SSA01) and Roseibium in B12-limited media for 12 weeks, followed by differential gene expression analysis comparing controls (axenic SSA01 or axenic Roseibium) and coculture treatments. 
 
