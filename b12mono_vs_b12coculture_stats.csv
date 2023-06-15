@@ -1,0 +1,16 @@
+,Treatment,time,.y.,group1,group2,n1,n2,p,p.adj,p.adj.signif
+1,high_density,Week_0,score,cocultures,monoculture,3,3,NA,NA,
+2,low_density,Week_0,score,cocultures,monoculture,3,3,NA,NA,
+3,mid_density,Week_0,score,cocultures,monoculture,3,3,NA,NA,
+4,high_density,Week_12,score,cocultures,monoculture,3,3,0.011,0.011,*
+5,low_density,Week_12,score,cocultures,monoculture,3,3,0.000361,0.000361,***
+6,mid_density,Week_12,score,cocultures,monoculture,3,3,0.049,0.049,*
+7,high_density,Week_4,score,cocultures,monoculture,3,3,0.009,0.009,**
+8,low_density,Week_4,score,cocultures,monoculture,3,3,0.014,0.014,*
+9,mid_density,Week_4,score,cocultures,monoculture,3,3,0.058,0.058,ns
+10,high_density,Week_6,score,cocultures,monoculture,3,3,0.015,0.015,*
+11,low_density,Week_6,score,cocultures,monoculture,3,3,0.237,0.237,ns
+12,mid_density,Week_6,score,cocultures,monoculture,3,3,0.149,0.149,ns
+13,high_density,Week_8,score,cocultures,monoculture,3,3,0.53,0.53,ns
+14,low_density,Week_8,score,cocultures,monoculture,3,3,0.143,0.143,ns
+15,mid_density,Week_8,score,cocultures,monoculture,3,3,0.683,0.683,ns
