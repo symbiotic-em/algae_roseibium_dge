@@ -66,7 +66,7 @@ a + scale_x_continuous(breaks=c(0, 4, 8, 12), "time (weeks)") + theme(text = ele
 ############## two-way repeated measures of ANOVA R #################
 b12= read.csv("b12_rose_ssa01.csv") #or see below vvv to subset the starved rose counts vvv
 b12= read.csv("b12_starved_vs_b12coculture_counts.csv")
-#b12=subset(b12, Type %in% c("monoculture")) #subset to starved
+#b12=subset(b12, Type %in% c("monoculture")) #subset to starved or cocultures 
 b12
 
 
@@ -171,6 +171,41 @@ write.csv(pwc2, "cocultures_twowayanova_stats.csv")
 write.csv(pwc2, "starved_twowayanova_stats.csv")
 
 #repeat all code above for starved Roseibium  ^^^^^^^^^^^^^^^^^
+
+###one-way anova to compare treatment among cocultures in only week 12
+b12= read.csv("b12_starved_vs_b12coculture_counts.csv")
+#b12=subset(b12, Type %in% c("cocultures")) #subset to cocultures 
+b12
+#group by treatment and time
+b12_2 <- b12 %>%
+  gather(key = "time", value = "score", Week_12) %>%
+  convert_as_factor(Replicates, Treatment, time)
+#one-way anova, just interested in treatment effects at week 12
+res.aov <- anova_test(
++   data = b12_2, dv = score, wid = Replicates,
++  between = c(Treatment), type=3) 
+get_anova_table(res.aov)
+#ANOVA Table (type III tests)
+
+#     Effect DFn DFd     F     p p<.05   ges
+#1 Treatment   2   6 1.371 0.323       0.314
+
+#now pwc
+pwc2 <- b12_2 %>%
+  group_by(time) %>%
+  pairwise_t_test(
+    score ~ Treatment, paired = TRUE,
+    p.adjust.method = "bonferroni"
+    )
+pwc2
+ #A tibble: 3 × 11
+#  time    .y.   group1       group2         n1    n2 statistic    df     p p.adj p.adj.signif
+* <fct>   <chr> <chr>        <chr>       <int> <int>     <dbl> <dbl> <dbl> <dbl> <chr>       
+#1 Week_12 score high_density low_density     3     3    2.57       2 0.124 0.372 ns          
+#2 Week_12 score high_density mid_density     3     3    0.0214     2 0.985 1     ns          
+#3 Week_12 score low_density  mid_density     3     3   -1.24       2 0.341 1     ns   
+
+#none are significant
 
 
 ################ three way ANOVA ##############
