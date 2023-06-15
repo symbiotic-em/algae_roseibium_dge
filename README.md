@@ -40,6 +40,7 @@ Growth stats
 - SSA01_growth_stats_script     SSA01 stats script
 - b12_roseibium_for_lm.csv    input file for plotting a graph for Roseibium
 - b12_starved_vs_b12coculture_counts.csv    input file for ANOVA for Roseibium
+- b12mono_vs_b12coculture_stats.csv    statistical output for posthoc t-test for cocultures vs monocultures
 - b12_counts_for_lm.csv     input file for plotting a graph for SSA01
 - ssa01_counts_for_anova.csv    input file for ANOVA for SSA01
 - Round 1, Round 2, Round 3 folders     input files for three subculturing, no B12 trials of SSA01
