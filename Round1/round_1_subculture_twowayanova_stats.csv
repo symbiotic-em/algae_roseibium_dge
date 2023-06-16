@@ -1,0 +1,6 @@
+,time,.y.,group1,group2,p.adj,p.adj.signif
+1,Week_0,score,b12,no_b12,0.368,ns
+2,Week_1,score,b12,no_b12,0.327,ns
+3,Week_2,score,b12,no_b12,0.028,*
+4,Week_3,score,b12,no_b12,0.766,ns
+5,Week_4,score,b12,no_b12,0.128,ns
