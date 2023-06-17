@@ -1,0 +1,37 @@
+,name1,val1,name2,val2,pval
+time,0,0,0,0,0
+mean in group b12,mean in group b12,10000,mean in group bacteria,8194.444444,0.128961395
+mean in group bacteria,mean in group bacteria,8194.444444,mean in group no_b12,9166.666667,0.774210586
+mean in group b12,mean in group b12,10000,mean in group no_b12,9166.666667,0.805008088
+time,1,1,1,1,1
+mean in group b12,mean in group b12,8750,mean in group bacteria,8888.888889,0.956460492
+mean in group bacteria,mean in group bacteria,8888.888889,mean in group no_b12,7916.666667,0.514090295
+mean in group b12,mean in group b12,8750,mean in group no_b12,7916.666667,0.754428341
+time,2,2,2,2,2
+mean in group b12,mean in group b12,15833.33333,mean in group bacteria,14583.33333,0.72785786
+mean in group bacteria,mean in group bacteria,14583.33333,mean in group no_b12,15416.66667,0.847102666
+mean in group b12,mean in group b12,15833.33333,mean in group no_b12,15416.66667,0.934745491
+time,3,3,3,3,3
+mean in group b12,mean in group b12,38333.33333,mean in group bacteria,24166.66667,0.084258898
+mean in group bacteria,mean in group bacteria,24166.66667,mean in group no_b12,34583.33333,0.011839161
+mean in group b12,mean in group b12,38333.33333,mean in group no_b12,34583.33333,0.530406708
+time,4,4,4,4,4
+mean in group b12,mean in group b12,36666.66667,mean in group bacteria,44583.33333,0.096163406
+mean in group bacteria,mean in group bacteria,44583.33333,mean in group no_b12,33750,0.039935721
+mean in group b12,mean in group b12,36666.66667,mean in group no_b12,33750,0.441859456
+time,5,5,5,5,5
+mean in group b12,mean in group b12,61666.66667,mean in group bacteria,59583.33333,0.729608156
+mean in group bacteria,mean in group bacteria,59583.33333,mean in group no_b12,60833.33333,0.807659554
+mean in group b12,mean in group b12,61666.66667,mean in group no_b12,60833.33333,0.895466863
+time,6,6,6,6,6
+mean in group b12,mean in group b12,70000,mean in group bacteria,76250,0.610228707
+mean in group bacteria,mean in group bacteria,76250,mean in group no_b12,58333.33333,0.004664278
+mean in group b12,mean in group b12,70000,mean in group no_b12,58333.33333,0.371449168
+time,7,7,7,7,7
+mean in group b12,mean in group b12,99166.66667,mean in group bacteria,104861.1111,0.64166686
+mean in group bacteria,mean in group bacteria,104861.1111,mean in group no_b12,72083.33333,0.009466203
+mean in group b12,mean in group b12,99166.66667,mean in group no_b12,72083.33333,0.092890239
+time,12,12,12,12,12
+mean in group b12,mean in group b12,230000,mean in group bacteria,285694.4444,0.007200937
+mean in group bacteria,mean in group bacteria,285694.4444,mean in group no_b12,160000,0.000198928
+mean in group b12,mean in group b12,230000,mean in group no_b12,160000,0.008964316
