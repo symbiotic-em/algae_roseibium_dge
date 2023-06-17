@@ -47,9 +47,9 @@ Growth stats for SSA01
 - b12_counts_for_lm_ck.csv     input file for plotting a graph for SSA01 and Welch t-test
 - ssa01_counts_for_anova.csv    input file for ANOVA for SSA01
 - Round 1, Round 2, Round 3 folders     folders containing input files for three subculturing, no B12 trials of SSA01 and statistical output
-- t-tests_time.csv    statistical output in raw dataframe
-- t-tests_pvalues_padj    cleaned statistical output and formatted for addition of p.adjusted value
-- compat_adj.pvalues    same dataframe as above, but with p.adjusted values
+- t-tests_time.csv    statistical output for Welch t-test in raw dataframe
+- t-tests_pvalues_padj.csv    cleaned statistical output (t-tests_time.csv) and formatted for addition of p.adjusted value
+- compat_adj.pvalues.csv    same dataframe as above (t-tests_pvalues_padj.csv), but with p.adjusted values
 
 
 BLAST results of SSA01 transcriptome blasted to metE/metH sequences from Lin et al. (2022) found at --> https://doi.org/10.1016/j.fmre.2021.12.014
