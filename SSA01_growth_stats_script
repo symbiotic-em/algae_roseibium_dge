@@ -11,11 +11,6 @@ ggplot(b12, aes(x=time, y=Counts, group=Treatment)) +
   geom_line(aes(linetype=Treatment))+ facet_wrap(~Type)+
   geom_smooth()
 
-# Change line types, point shapes and colors
-ggplot(df, aes(x=dose, y=len, group=supp)) +
-  geom_line(aes(linetype=supp, color = supp))+
-  geom_point(aes(shape=supp, color = supp))
-
 b12$Counts=as.numeric(b12$Counts)
 
 
@@ -64,12 +59,11 @@ a + scale_x_continuous(breaks=c(0, 4, 8, 12), "time (weeks)") + theme(text = ele
 
 
 ############## two-way repeated measures of ANOVA R #################
-##https://www.datanovia.com/en/lessons/repeated-measures-anova-in-r/
+##modified tutorial from https://www.datanovia.com/en/lessons/repeated-measures-anova-in-r/
 
-b12= read.csv("round_2_cts_for_ANOVA.csv") #or see below vvv to subset the sym only counts vvv
-#b12=subset(b12, Type %in% c("coculture")) #subset to mono or coculture
+b12= read.csv("ssa01_counts_for_anova.csv") #or whatever .csv with counts
+#b12=subset(b12, Type %in% c("coculture")) #subset to mono or coculture if needed for stats
 b12
-
 
 #group by treatment and time
 b12_2 <- b12 %>%
@@ -88,9 +82,7 @@ summary= b12_2 %>%
   get_summary_stats(score, type = "mean_sd")
 data.frame(summary)
 
-#write as csv
-write.csv(b12_2, "round_2_mean_sd_stats.csv")
-
+#save as csv if needed 
 
 #visualize data you want to test
 bxp <- ggboxplot(b12_2, x = "time", y = "score",
@@ -116,20 +108,38 @@ get_anova_table(res.aov)
 
 #yes statistically significant two-way interactions between treatment and time
 
-###########ROUND 1 ############
+#yes for cocultures, statistically significant two-way interactions between treatment and time, 
+#ANOVA Table (type III tests)
+ #         Effect DFn DFd       F        p p<.05   ges
+#1      Treatment   2  54   2.287 1.11e-01       0.078
+#2           time   8  54 519.349 3.27e-48     * 0.987
+#3 Treatment:time  16  54   1.620 9.50e-02       0.324
+
+
+#also, yes for monocultures but only an effect of time
+#ANOVA Table (type III tests)
+
+ #         Effect DFn DFd       F        p p<.05   ges
+#1      Treatment   1  36  24.663 1.67e-05     * 0.407
+#2           time   8  36 213.895 5.62e-28     * 0.979
+#3 Treatment:time   8  36   8.417 2.29e-06     * 0.652
+
+
+
+########### ROUND 1 subculture ############
 
 #Effect DFn DFd       F        p p<.05   ges
 #1      Treatment   1  20   4.933 3.80e-02     * 0.198
 #2           time   4  20 176.620 2.68e-15     * 0.972
 #3 Treatment:time   4  20   4.462 1.00e-02     * 0.472
  
-########ROUND 2 #################
+######## ROUND 2 subculture #################
  #  Effect DFn DFd       F        p p<.05      ges
 #1      Treatment   1  28   1.680 2.06e-01       0.057
 #2           time   6  28 248.890 5.93e-23     * 0.982
 #3 Treatment:time   6  28   2.905 2.50e-02     * 0.384
 
-######Round 3 ###############
+###### Round 3 subculture  ###############
 
 #      Effect DFn DFd           F        p p<.05      ges
 #1      Treatment   1  16 3.03000e-06 9.99e-01       1.89e-07
@@ -148,20 +158,36 @@ one.way2 <- b12_2 %>%
   adjust_pvalue(method = "bonferroni")
 one.way2
 
-###### ROUND 1 ############
+#for cocultures only:
+# A tibble: 3 × 9
+  Treatment    Effect   DFn   DFd     F        p `p<.05`   ges    p.adj
+  <fct>        <chr>  <dbl> <dbl> <dbl>    <dbl> <chr>   <dbl>    <dbl>
+1 high_density time       8    16  127. 5.41e-13 *       0.984 1.62e-12
+2 low_density  time       8    16  153. 1.21e-13 *       0.987 3.63e-13
+3 mid_density  time       8    16  254. 2.27e-15 *       0.991 6.81e-15
+
+#for monocultures:
+# A tibble: 2 × 9
+  Treatment Effect   DFn   DFd     F        p `p<.05`   ges    p.adj
+  <fct>     <chr>  <dbl> <dbl> <dbl>    <dbl> <chr>   <dbl>    <dbl>
+1 b12       time       8    16  205. 1.23e-14 *       0.981 2.46e-14
+2 no_b12    time       8    16  115. 1.17e-12 *       0.977 2.34e-12
+
+
+###### ROUND 1 subculture ############
 # A tibble: 2 × 9
  # Treatment Effect   DFn   DFd     F            p `p<.05`   ges        p.adj
  # <fct>     <chr>  <dbl> <dbl> <dbl>        <dbl> <chr>   <dbl>        <dbl>
 #1 b12       time       4     8  57.0 0.00000643   *       0.964 0.0000129   
 #2 no_b12    time       4     8 229.  0.0000000278 *       0.987 0.0000000556
 
-###### ROUND 2 ###########
+###### ROUND 2 subculture ###########
 # A tibble: 2 × 9
 #  Treatment Effect   DFn   DFd     F        p `p<.05`   ges    p.adj
 #  <fct>     <chr>  <dbl> <dbl> <dbl>    <dbl> <chr>   <dbl>    <dbl>
 #1 b12       time       6    12  98.2 1.71e- 9 *       0.976 3.42e- 9
 #2 no_b12    time       6    12 183.  4.40e-11 *       0.986 8.80e-11
-###### Round 3 ##############
+###### Round 3 subculture##############
 # A tibble: 2 × 9
  # Treatment Effect   DFn   DFd     F          p `p<.05`   ges      p.adj
 #  <fct>     <chr>  <dbl> <dbl> <dbl>      <dbl> <chr>   <dbl>      <dbl>
@@ -169,7 +195,7 @@ one.way2
 #2 no_b12    time    3     6     241. 0.00000121 *       0.987 0.00000242
 
 
-# Pairwise comparisons between time points
+# Pairwise comparisons between time points (posthoc t-tests)
 pwc2 <- b12_2 %>%
   group_by(time) %>%
   pairwise_t_test(
@@ -178,39 +204,49 @@ pwc2 <- b12_2 %>%
     )
 pwc2
 
-########### ROUND 1 ##################
-# A tibble: 5 × 11
- # time   .y.   group1 group2    n1    n2 statistic    df     p p.adj p.adj.signif
-#* <fct>  <chr> <chr>  <chr>  <int> <int>     <dbl> <dbl> <dbl> <dbl> <chr>       
-#1 Week_0 score b12    no_b12     3     3    -1.15      2 0.368 0.368 ns          
-#2 Week_1 score b12    no_b12     3     3    -1.29      2 0.327 0.327 ns          
-#3 Week_2 score b12    no_b12     3     3     5.88      2 0.028 0.028 *           
-#4 Week_3 score b12    no_b12     3     3    -0.340     2 0.766 0.766 ns          
-#5 Week_4 score b12    no_b12     3     3     2.52      2 0.128 0.128 ns 
-
-########## ROUND 2 ##################
-# A tibble: 7 × 11
-#  time   .y.   group1 group2    n1    n2 statistic    df     p p.adj p.adj.signif
-#* <fct>  <chr> <chr>  <chr>  <int> <int>     <dbl> <dbl> <dbl> <dbl> <chr>       
-#1 Week_0 score b12    no_b12     3     3     0.400     2 0.728 0.728 ns          
-#2 Week_1 score b12    no_b12     3     3     1.32      2 0.317 0.317 ns          
-#3 Week_2 score b12    no_b12     3     3    -1.43      2 0.289 0.289 ns          
-#4 Week_3 score b12    no_b12     3     3    -2         2 0.184 0.184 ns          
-#5 Week_4 score b12    no_b12     3     3     0.283     2 0.804 0.804 ns          
-#6 Week_5 score b12    no_b12     3     3     0.723     2 0.545 0.545 ns          
-#7 Week_7 score b12    no_b12     3     3    -3         2 0.096 0.096 ns   
-
-########## ROUND 3 ##################
- # A tibble: 4 × 11
-#  time   .y.   group1 group2    n1    n2 statistic    df     p p.adj p.adj.signif
-#* <fct>  <chr> <chr>  <chr>  <int> <int>     <dbl> <dbl> <dbl> <dbl> <chr>       
-#1 Week_0 score b12    no_b12     3     3   -1.42       2 0.292 0.292 ns          
-#2 Week_3 score b12    no_b12     3     3   -1.96       2 0.188 0.188 ns          
-#3 Week_6 score b12    no_b12     3     3   -0.0258     2 0.982 0.982 ns          
-#4 Week_8 score b12    no_b12     3     3    0.756      2 0.529 0.529 ns  
-
 #save pwc for reference later 
-write.csv(pwc2, "round_2_subculture_twowayanova_stats.csv")
-
+write.csv(pwc2, "round_2_subculture_twowayanova_stats.csv") #change title as needed for different datasets
 
 #repeat all code above for each round  ^^^^^^^^^^^^^^^^^
+
+############# Welch t-test ######################
+#t-test per timepoint, to compare levels (bacteria or no b12 and b12)
+#for each timepoint= Week_1, Week_2, Week_3, Week_4, Week_5, Week_6, Week_7, Week_12
+#for each pairwise comparison between levels so example) Week 1, compare b12 vs no_b12, b12 vs bacteria, no_b12 vs bacteria
+#collect all p-values from pairwise comparisons in one data frame and then p.adjust w Bonferroni 
+#  Welch Two Sample t-test
+#read the csv
+b12= read.csv("b12_counts_for_lm_ck.csv")
+b12
+#subset to timepoint of interest, do all of them 
+sub<-subset(b12,time=="12") # do this with all timepoints: 0,1,2,3,4,5,6,7,12
+sub
+#additionally subset to only 2 levels for pairwise comparisons
+sub<-subset(sub, Treatment2!="bacteria") #for each timepoint, do: no_b12, b12, bacteria
+sub
+#conduct t-tests
+test=t.test(Counts~Treatment2, sub)
+test
+#rename, reformat pvalues and names 
+pval<-test$p.value
+name1<-names(test$estimate[1])
+val1<-test$estimate[1]
+name2<-names(test$estimate[2])
+val2<-test$estimate[2]
+#bind all these above ^^^^
+z=cbind(name1,val1,name2,val2,pval)  # for each timepoint, I assign: x=bacteria vs b12, y=bacteria vs no_b12, z= b12 vs no_b12
+
+time= "12" #change for each timepoint
+time
+t12=rbind(time,x,y,z)   # pairwise comparisons for all in one data frame (with labels of either: t0, t1, t2, t3, t4, t5, t6, t7, t12) 
+
+#once you have all the timepoints, join them together into one data frame
+new=rbind(t0, t1, t2, t3, t4, t5, t6, t7, t12)
+new
+write.csv(new, "t-tests_time.csv")
+#format it into one long list on Excel and save it, now read it:
+compat=read.csv("t-tests_pvalues_padj.csv")
+#add a bonferroni adjustment column
+compat$adjust = p.adjust(compat$pval, "bonferroni")
+#save it
+write.csv(compat, "compat_adj.pvalues.csv")
