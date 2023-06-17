@@ -35,15 +35,20 @@ GO MWU analysis
 - ssa01_final_go.tab      input file
 
 
-Growth stats
+Growth stats for Roseibium 
 - rose_growth_stats_script    Roseibium stats script
 - SSA01_growth_stats_script     SSA01 stats script
 - b12_roseibium_for_lm.csv    input file for plotting a graph for Roseibium
 - b12_starved_vs_b12coculture_counts.csv    input file for ANOVA for Roseibium
+
+Growth stats for SSA01
 - b12mono_vs_b12coculture_stats.csv    statistical output for posthoc t-test for cocultures vs monocultures
-- b12_counts_for_lm.csv     input file for plotting a graph for SSA01
+- b12_counts_for_lm_ck.csv     input file for plotting a graph for SSA01 and Welch t-test
 - ssa01_counts_for_anova.csv    input file for ANOVA for SSA01
-- Round 1, Round 2, Round 3 folders     folders containing input files for three subculturing, no B12 trials of SSA01 and statistical output 
+- Round 1, Round 2, Round 3 folders     folders containing input files for three subculturing, no B12 trials of SSA01 and statistical output
+- t-tests_time.csv    statistical output in raw dataframe
+- t-tests_pvalues_padj    cleaned statistical output and formatted for addition of p.adjusted value
+- compat_adj.pvalues    same dataframe as above, but with p.adjusted values
 
 
 BLAST results of SSA01 transcriptome blasted to metE/metH sequences from Lin et al. (2022) found at --> https://doi.org/10.1016/j.fmre.2021.12.014
